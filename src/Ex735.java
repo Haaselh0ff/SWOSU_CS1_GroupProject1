@@ -6,9 +6,9 @@ public class Ex735 {
 	public static char GameHub(){
 		Scanner input = new Scanner(System.in); 
 		System.out.println("GAME HUB: PLEASE SELECT A GAME \n"
-				+ "(1) Hangman - 'The classic game of guessing letters to spell out a word. \n"
-				+ "(2) Deck of Cards Game - 'I don't actually know what this game is but have fun. \n"
-				+ "(3) Lane's Game - 'Not sure where he is, but I hope he helps us out on this code.");
+				+ "(1) Hangman - The classic game of guessing letters to spell out a word. \n"
+				+ "(2) Deck of Cards Game - I don't actually know what this game is but have fun. \n"
+				+ "(3) Lane's Game - Not sure where he is, but I hope he helps us out on this code.");
 		int whichGame = input.nextInt();
 		if (whichGame == 1){
 			for (int i = 0; i < 100; ++i) System.out.println();
