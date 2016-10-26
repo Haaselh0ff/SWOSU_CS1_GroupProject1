@@ -59,6 +59,7 @@ public class Ex735 {
 	public static char EasyModeCustomMethod(String guess, double randomizer){
 		Scanner input = new Scanner(System.in); 
 		int failurecount = 0; //gonna use this later
+		int Hangman = 0;
 		System.out.println("Easy Mode Enabled (Please note, this program only takes in one letter at a time)");
 		//Create Array
 		char[] Easy;
@@ -140,12 +141,12 @@ public class Ex735 {
 		EasyBlank[2] = 42;
 		System.out.print(" *** > ");
 		guess = input.next();		
-		System.out.print(EasyModeBlanksCustomMethod(guess, Easy, EasyBlank, failurecount));
+		System.out.print(EasyModeBlanksCustomMethod(guess, Easy, EasyBlank, failurecount, Hangman));
 
 		char blank = ' ';
 		return blank;
 	}
-	public static char EasyModeBlanksCustomMethod(String guess, char[] Easy, int[] EasyBlank, int failurecount){
+	public static char EasyModeBlanksCustomMethod(String guess, char[] Easy, int[] EasyBlank, int failurecount, int Hangman){
 		//System.out.println("Easy Mode Blanks");
 		Scanner input = new Scanner(System.in); 
 		char blank = ' ';
@@ -178,7 +179,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(EasyModeBlanksCustomMethod(guess, Easy, EasyBlank, failurecount));
+			System.out.print(EasyModeBlanksCustomMethod(guess, Easy, EasyBlank, failurecount, Hangman));
 		}
 		if (EasyGuess == Easy[1]){
 			EasyBlank[1] = Easy[1];
@@ -192,7 +193,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(EasyModeBlanksCustomMethod(guess, Easy, EasyBlank, failurecount));
+			System.out.print(EasyModeBlanksCustomMethod(guess, Easy, EasyBlank, failurecount, Hangman));
 		}
 		if (EasyGuess == Easy[2]){
 			EasyBlank[2] = Easy[2];
@@ -206,7 +207,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(EasyModeBlanksCustomMethod(guess, Easy, EasyBlank, failurecount));
+			System.out.print(EasyModeBlanksCustomMethod(guess, Easy, EasyBlank, failurecount, Hangman));
 
 		}
 		int failure = 0;
@@ -221,13 +222,15 @@ public class Ex735 {
 		}
 		if (failure <= 3){
 			failurecount += 1;
+			Hangman += 1;
+			System.out.print(HangmanManCustomMethod(Hangman));
 			System.out.print("Oh, sorry. There is no " + guess + " in the word.\nYou have failed "
 					+ failurecount + " times.\nGuess again for: ");
 			System.out.print((char) EasyBlank[0]);
 			System.out.print((char) EasyBlank[1]);
 			System.out.print((char) EasyBlank[2]);
 			guess = input.next();
-			System.out.print(EasyModeBlanksCustomMethod(guess, Easy, EasyBlank, failurecount));
+			System.out.print(EasyModeBlanksCustomMethod(guess, Easy, EasyBlank, failurecount, Hangman));
 		}
 		return blank;
 	}
@@ -283,6 +286,7 @@ public class Ex735 {
 	public static char MediumModeCustomMethod(String guess, double randomizer){
 		Scanner input = new Scanner(System.in); 
 		int failurecount = 0; //gonna use this later
+		int Hangman = 0;
 		//Create Array
 		char[] Medium;
 		Medium = null;
@@ -376,12 +380,12 @@ public class Ex735 {
 		MediumBlank[4] = 42;
 		System.out.print(" ***** > ");
 		guess = input.next();		
-		System.out.print(MediumModeBlanksCustomMethod(guess, Medium, MediumBlank, failurecount));
+		System.out.print(MediumModeBlanksCustomMethod(guess, Medium, MediumBlank, failurecount, Hangman));
 
 		char blank = ' ';
 		return blank;
 	}
-	public static char MediumModeBlanksCustomMethod(String guess, char[] Medium, int[] MediumBlank, int failurecount){
+	public static char MediumModeBlanksCustomMethod(String guess, char[] Medium, int[] MediumBlank, int failurecount, int Hangman){
 		//System.out.println("Medium Mode Blanks");
 		Scanner input = new Scanner(System.in); 
 		char blank = ' ';
@@ -427,7 +431,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(MediumModeBlanksCustomMethod(guess, Medium, MediumBlank, failurecount));
+			System.out.print(MediumModeBlanksCustomMethod(guess, Medium, MediumBlank, failurecount, Hangman));
 		}
 		if (MediumGuess == Medium[1]){
 			MediumBlank[1] = Medium[1];
@@ -447,7 +451,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(MediumModeBlanksCustomMethod(guess, Medium, MediumBlank, failurecount));
+			System.out.print(MediumModeBlanksCustomMethod(guess, Medium, MediumBlank, failurecount, Hangman));
 		}
 		if (MediumGuess == Medium[2]){
 			MediumBlank[2] = Medium[2];
@@ -466,7 +470,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(MediumModeBlanksCustomMethod(guess, Medium, MediumBlank, failurecount));
+			System.out.print(MediumModeBlanksCustomMethod(guess, Medium, MediumBlank, failurecount, Hangman));
 
 		}
 		if (MediumGuess == Medium[3]){
@@ -487,7 +491,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(MediumModeBlanksCustomMethod(guess, Medium, MediumBlank, failurecount));
+			System.out.print(MediumModeBlanksCustomMethod(guess, Medium, MediumBlank, failurecount, Hangman));
 
 		}
 		if (MediumGuess == Medium[4]){
@@ -508,7 +512,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(MediumModeBlanksCustomMethod(guess, Medium, MediumBlank, failurecount));
+			System.out.print(MediumModeBlanksCustomMethod(guess, Medium, MediumBlank, failurecount, Hangman));
 
 		}
 		int failure = 0;
@@ -529,6 +533,8 @@ public class Ex735 {
 		}
 		if (failure <= 5){
 			failurecount += 1;
+			Hangman += 1;
+			System.out.print(HangmanManCustomMethod(Hangman));
 			System.out.print("Oh, sorry. There is no " + guess + " in the word.\nYou have failed "
 					+ failurecount + " times.\nGuess again for: ");
 			System.out.print((char) MediumBlank[0]);
@@ -537,13 +543,14 @@ public class Ex735 {
 			System.out.print((char) MediumBlank[3]);
 			System.out.print((char) MediumBlank[4]);
 			guess = input.next();
-			System.out.print(MediumModeBlanksCustomMethod(guess, Medium, MediumBlank, failurecount));
+			System.out.print(MediumModeBlanksCustomMethod(guess, Medium, MediumBlank, failurecount, Hangman));
 		}
 		return blank;
 	}
 	public static char HardModeCustomMethod(String guess, double randomizer){
 		Scanner input = new Scanner(System.in); 
 		int failurecount = 0; //gonna use this later
+		int Hangman = 0;
 		//Create Array
 		char[] Hard;
 		Hard = null;
@@ -642,12 +649,12 @@ public class Ex735 {
 		HardBlank[9] = 42;
 		System.out.print(" ********** > ");
 		guess = input.next();		
-		System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount));
+		System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount, Hangman));
 
 		char blank = ' ';
 		return blank;
 	}
-	public static char HardModeBlanksCustomMethod(String guess, char[] Hard, int[] HardBlank, int failurecount){
+	public static char HardModeBlanksCustomMethod(String guess, char[] Hard, int[] HardBlank, int failurecount, int Hangman){
 		//System.out.println("Hard Mode Blanks");
 		Scanner input = new Scanner(System.in); 
 		char blank = ' ';
@@ -728,7 +735,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount));
+			System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount, Hangman));
 		}
 		if (HardGuess == Hard[1]){
 			HardBlank[1] = Hard[1];
@@ -763,7 +770,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount));
+			System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount, Hangman));
 		}
 		if (HardGuess == Hard[2]){
 			HardBlank[2] = Hard[2];
@@ -798,7 +805,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount));
+			System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount, Hangman));
 
 		}
 		if (HardGuess == Hard[3]){
@@ -834,7 +841,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount));
+			System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount, Hangman));
 
 		}
 		if (HardGuess == Hard[4]){
@@ -870,7 +877,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount));
+			System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount, Hangman));
 		}
 		if (HardGuess == Hard[5]){
 			HardBlank[5] = Hard[5];
@@ -905,7 +912,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount));
+			System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount, Hangman));
 		}
 		if (HardGuess == Hard[6]){
 			HardBlank[6] = Hard[6];
@@ -940,7 +947,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount));
+			System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount, Hangman));
 		}
 		if (HardGuess == Hard[7]){
 			HardBlank[7] = Hard[7];
@@ -975,7 +982,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount));
+			System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount, Hangman));
 		}
 		if (HardGuess == Hard[8]){
 			HardBlank[8] = Hard[8];
@@ -1010,7 +1017,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount));
+			System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount, Hangman));
 		}
 		if (HardGuess == Hard[9]){
 			HardBlank[9] = Hard[9];
@@ -1045,7 +1052,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount));
+			System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount, Hangman));
 		}
 		int failure = 0;
 		if (HardGuess != Hard[0]){
@@ -1080,6 +1087,8 @@ public class Ex735 {
 		}
 		if (failure <= 10){
 			failurecount += 1;
+			Hangman += 1;
+			System.out.print(HangmanManCustomMethod(Hangman));
 			System.out.print("Oh, sorry. There is no " + guess + " in the word.\nYou have failed "
 					+ failurecount + " times.\nGuess again for: ");
 			System.out.print((char) HardBlank[0]);
@@ -1093,13 +1102,14 @@ public class Ex735 {
 			System.out.print((char) HardBlank[8]);
 			System.out.print((char) HardBlank[9]);
 			guess = input.next();
-			System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount));
+			System.out.print(HardModeBlanksCustomMethod(guess, Hard, HardBlank, failurecount, Hangman));
 		}
 		return blank;
 	}
 	public static char ImpossibleModeCustomMethod(String guess, double randomizer){
 		Scanner input = new Scanner(System.in); 
 		int failurecount = 0; //gonna use this later
+		int Hangman = 0;
 		//Create Array
 		char[] Impossible;
 		Impossible = null;
@@ -1133,12 +1143,12 @@ public class Ex735 {
 		ImpossibleBlank[6] = 42;
 		System.out.print(" ******* > ");
 		guess = input.next();		
-		System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount));
+		System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
 
 		char blank = ' ';
 		return blank;
 	}
-	public static char ImpossibleModeBlanksCustomMethod(String guess, char[] Impossible, int[] ImpossibleBlank, int failurecount){
+	public static char ImpossibleModeBlanksCustomMethod(String guess, char[] Impossible, int[] ImpossibleBlank, int failurecount, int Hangman){
 		//System.out.println("Impossible Mode Blanks");
 		Scanner input = new Scanner(System.in); 
 		char blank = ' ';
@@ -1198,7 +1208,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount));
+			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
 		}
 		if (ImpossibleGuess == Impossible[1]){
 			ImpossibleBlank[1] = Impossible[1];
@@ -1225,7 +1235,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount));
+			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
 		}
 		if (ImpossibleGuess == Impossible[2]){
 			ImpossibleBlank[2] = Impossible[2];
@@ -1251,7 +1261,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount));
+			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
 		}
 		if (ImpossibleGuess == Impossible[3]){
 			ImpossibleBlank[3] = Impossible[3];
@@ -1277,7 +1287,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount));
+			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
 		}
 		if (ImpossibleGuess == Impossible[5]){
 			ImpossibleBlank[5] = Impossible[5];
@@ -1303,7 +1313,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount));
+			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
 		}
 		if (ImpossibleGuess == Impossible[6]){
 			ImpossibleBlank[6] = Impossible[6];
@@ -1329,7 +1339,7 @@ public class Ex735 {
 			}
 			System.out.print(" > ");
 			guess = input.next();	
-			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount));
+			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
 		}
 		int failure = 0;
 		if (ImpossibleGuess != Impossible[0]){
@@ -1355,6 +1365,8 @@ public class Ex735 {
 		}
 		if (failure <= 7){
 			failurecount += 1;
+			Hangman += 1;
+			System.out.print(HangmanManCustomMethod(Hangman));
 			System.out.print("Oh, sorry. There is no " + guess + " in the word.\nYou have failed "
 					+ failurecount + " times.\nGuess again for: ");
 			System.out.print((char) ImpossibleBlank[0]);
@@ -1365,8 +1377,91 @@ public class Ex735 {
 			System.out.print((char) ImpossibleBlank[5]);
 			System.out.print((char) ImpossibleBlank[6]);
 			guess = input.next();
-			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount));
+			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
 		}
+		return blank;
+	}
+	public static char HangmanManCustomMethod(int Hangman){
+		if (Hangman == 0){
+			System.out.println("\t ________________");
+			System.out.println("\t |\t\t|");
+			System.out.println("\t |\t\t|");
+			System.out.println("\t \t\t|");
+			System.out.println("\t \t\t|");
+			System.out.println("\t \t\t|");
+			System.out.println("\t \t\t|");
+			System.out.println("\t \t\t|");
+			System.out.println("________________________|_______");
+		}
+		if (Hangman == 1){
+			System.out.println("\t ________________");
+			System.out.println("\t |\t\t|");
+			System.out.println("\t |\t\t|");
+			System.out.println("\t O \t\t|");
+			System.out.println("\t \t\t|");
+			System.out.println("\t \t\t|");
+			System.out.println("\t \t\t|");
+			System.out.println("\t \t\t|");
+			System.out.println("________________________|_______");
+		}
+		if (Hangman == 2){
+			System.out.println("\t ________________");
+			System.out.println("\t |\t\t|");
+			System.out.println("\t |\t\t|");
+			System.out.println("\t O \t\t|");
+			System.out.println("\t | \t\t|");
+			System.out.println("\t |\t\t|");
+			System.out.println("\t \t\t|");
+			System.out.println("\t \t\t|");
+			System.out.println("________________________|_______");
+		}
+		if (Hangman == 3){
+			System.out.println("\t ________________");
+			System.out.println("\t |\t\t|");
+			System.out.println("\t |\t\t|");
+			System.out.println("\t O \t\t|");
+			System.out.println("\t |/ \t\t|");
+			System.out.println("\t |\t\t|");
+			System.out.println("\t \t\t|");
+			System.out.println("\t \t\t|");
+			System.out.println("________________________|_______");
+		}
+		if (Hangman == 4){
+			System.out.println("\t ________________");
+			System.out.println("\t |\t\t|");
+			System.out.println("\t |\t\t|");
+			System.out.println("\t O \t\t|");
+			System.out.println("\t\\|/ \t\t|");
+			System.out.println("\t |\t\t|");
+			System.out.println("\t \t\t|");
+			System.out.println("\t \t\t|");
+			System.out.println("________________________|_______");
+		}
+		if (Hangman == 5){
+			System.out.println("\t ________________");
+			System.out.println("\t |\t\t|");
+			System.out.println("\t |\t\t|");
+			System.out.println("\t O \t\t|");
+			System.out.println("\t\\|/ \t\t|");
+			System.out.println("\t |\t\t|");
+			System.out.println("\t/ \t\t|");
+			System.out.println("\t \t\t|");
+			System.out.println("________________________|_______");
+		}
+		if (Hangman == 6){
+			System.out.println("\t ________________");
+			System.out.println("\t |\t\t|");
+			System.out.println("\t |\t\t|");
+			System.out.println("\t O \t\t|");
+			System.out.println("\t\\|/ \t\t|");
+			System.out.println("\t |\t\t|");
+			System.out.println("\t/ \\\t\t|");
+			System.out.println("\t \t\t|");
+			System.out.println("________________________|_______");
+			System.out.println("Aw! Looks like you guessed wrong too many timess! Better Luck next time! "
+					+ "(You can keep guessing but just know you lost)");
+		}
+		char blank = ' ';
 		return blank;
 	}
 }
