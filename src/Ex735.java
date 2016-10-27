@@ -3,6 +3,7 @@ public class Ex735 {
 	public static void main(String[] args) { 
 		System.out.print(GameHub());
 	}
+	//GameHud. This is what you see when the code starts and allows you to select the various game modes.
 	public static char GameHub(){
 		Scanner input = new Scanner(System.in); 
 		System.out.println("GAME HUB: PLEASE SELECT A GAME \n"
@@ -56,11 +57,15 @@ public class Ex735 {
 		char blank = ' ';
 		return blank;
 	}
+	//EasyMode Code Start
 	public static char EasyModeCustomMethod(String guess, double randomizer){
 		Scanner input = new Scanner(System.in); 
 		int failurecount = 0; //gonna use this later
 		int Hangman = 0;
-		System.out.println("Easy Mode Enabled (Please note, this program only takes in one letter at a time)");
+		System.out.println("________________________________________________________________________________________");
+		System.out.println("|\t\t\t\tEasy Mode Enabled\t\t\t\t\t|");
+		System.out.println("|_______________________________________________________________________________________|");
+		System.out.println("(Please note, this program only takes in one letter at a time)");
 		//Create Array
 		char[] Easy;
 		Easy = null;
@@ -146,6 +151,7 @@ public class Ex735 {
 		char blank = ' ';
 		return blank;
 	}
+	//Easy Mode Code continued
 	public static char EasyModeBlanksCustomMethod(String guess, char[] Easy, int[] EasyBlank, int failurecount, int Hangman){
 		//System.out.println("Easy Mode Blanks");
 		Scanner input = new Scanner(System.in); 
@@ -234,6 +240,7 @@ public class Ex735 {
 		}
 		return blank;
 	}
+	//Difficulty Picker output. Allows you to pick the difficulty of words.
 	private static char[] DifficultyPickerCustomMethod(int failurecount) {
 		Scanner input = new Scanner(System.in); 
 		System.out.println("\nHey! You got the word! "
@@ -283,6 +290,7 @@ public class Ex735 {
 		}
 		return null;
 	}
+	//Medium Mode Code Start
 	public static char MediumModeCustomMethod(String guess, double randomizer){
 		Scanner input = new Scanner(System.in); 
 		int failurecount = 0; //gonna use this later
@@ -290,7 +298,10 @@ public class Ex735 {
 		//Create Array
 		char[] Medium;
 		Medium = null;
-		System.out.println("Medium Mode Enabled (Please note, this program only takes in one letter at a time)");
+		System.out.println("________________________________________________________________________________________");
+		System.out.println("|\t\t\t\tMedium Mode Enabled\t\t\t\t\t|");
+		System.out.println("|_______________________________________________________________________________________|");
+		System.out.println("(Please note, this program only takes in one letter at a time)");
 		//Set number of integers
 		if (randomizer > 0){
 			if(randomizer < 2.5){
@@ -385,6 +396,7 @@ public class Ex735 {
 		char blank = ' ';
 		return blank;
 	}
+	//Medium Code continued
 	public static char MediumModeBlanksCustomMethod(String guess, char[] Medium, int[] MediumBlank, int failurecount, int Hangman){
 		//System.out.println("Medium Mode Blanks");
 		Scanner input = new Scanner(System.in); 
@@ -547,6 +559,7 @@ public class Ex735 {
 		}
 		return blank;
 	}
+	//Hard Mode Code Start
 	public static char HardModeCustomMethod(String guess, double randomizer){
 		Scanner input = new Scanner(System.in); 
 		int failurecount = 0; //gonna use this later
@@ -554,7 +567,10 @@ public class Ex735 {
 		//Create Array
 		char[] Hard;
 		Hard = null;
-		System.out.println("Hard Mode Enabled (Please note, this program only takes in one letter at a time)");
+		System.out.println("________________________________________________________________________________________");
+		System.out.println("|\t\t\t\tHard Mode Enabled\t\t\t\t\t|");
+		System.out.println("|_______________________________________________________________________________________|");
+		System.out.println("(Please note, this program only takes in one letter at a time)");
 		//Set number of integers
 		//Code for word LUMBERJACK
 		if (randomizer > 0){
@@ -654,6 +670,7 @@ public class Ex735 {
 		char blank = ' ';
 		return blank;
 	}
+	//Hard Mode Code continued
 	public static char HardModeBlanksCustomMethod(String guess, char[] Hard, int[] HardBlank, int failurecount, int Hangman){
 		//System.out.println("Hard Mode Blanks");
 		Scanner input = new Scanner(System.in); 
@@ -1106,6 +1123,7 @@ public class Ex735 {
 		}
 		return blank;
 	}
+	//WARNING! CODE IS EXTREMELY LONG AND PROBABLY DONE THE WRONG WAY! ENTER WITH CAUTION
 	public static char ImpossibleModeCustomMethod(String guess, double randomizer){
 		Scanner input = new Scanner(System.in); 
 		int failurecount = 0; //gonna use this later
@@ -1113,27 +1131,55 @@ public class Ex735 {
 		//Create Array
 		char[] Impossible;
 		Impossible = null;
-		System.out.println("Impossible Mode Enabled (Please note, this program only takes in one letter at a time)");
+		System.out.println("________________________________________________________________________________________");
+		System.out.println("|\t\t\t\tImpossible Mode Enabled\t\t\t\t\t|");
+		System.out.println("|_______________________________________________________________________________________|");
+		System.out.println("(Please note, this program only takes in one letter at a time)");
 		//Set number of integers
-		//Code for word RHYTHMS
+		//Code for word PSEUDOPSEUDOHYPOPARATHYROIDISM
 		if (randomizer > 0){
 			if(randomizer < 15){
-				Impossible = new char [7];
+				Impossible = new char [30];
 				//Give each set a value
-				Impossible[0] = 82; //R
-				Impossible[1] = 72; //H
-				Impossible[2] = 89; //Y
-				Impossible[3] = 84; //T
-				Impossible[4] = 72; //H
-				Impossible[5] = 77; //M
-				Impossible[6] = 83; //S
-				System.out.print("The word you are guessing is 7 letters long and is the longest word without any vowels."
+				Impossible[0] = 80; //P Impossible[6] Impossible[14] Impossible[16]
+				Impossible[1] = 83; //S Impossible[7] Impossible[28]
+				Impossible[2] = 69; //E Impossible[8]
+				Impossible[3] = 85; //U Impossible[9]
+				Impossible[4] = 68; //D Impossible[10] Impossible[26]
+				Impossible[5] = 79; //O Impossible[11] Impossible[15] Impossible[24]
+				Impossible[6] = 80; //P --------------------------------------------
+				Impossible[7] = 83; //S --------------------------------------------
+				Impossible[8] = 69; //E --------------------------------------------
+				Impossible[9] = 85; //U --------------------------------------------
+				Impossible[10] = 68; //D -------------------------------------------
+				Impossible[11] = 79; //O -------------------------------------------
+				Impossible[12] = 72; //H Impossible[21]
+				Impossible[13] = 89; //Y Impossible[22]
+				Impossible[14] = 80; //P -------------------------------------------
+				Impossible[15] = 79; //O -------------------------------------------
+				Impossible[16] = 80; //P -------------------------------------------
+				Impossible[17] = 65; //A Impossible[19]
+				Impossible[18] = 82; //R Impossible[23]
+				Impossible[19] = 65; //A -------------------------------------------
+				Impossible[20] = 84; //T Impossible[20]
+				Impossible[21] = 72; //H -------------------------------------------
+				Impossible[22] = 89; //Y -------------------------------------------
+				Impossible[23] = 82; //R -------------------------------------------
+				Impossible[24] = 79; //O -------------------------------------------
+				Impossible[25] = 73; //I Impossible[27]
+				Impossible[26] = 68; //D -------------------------------------------
+				Impossible[27] = 73; //I -------------------------------------------
+				Impossible[28] = 83; //S -------------------------------------------
+				Impossible[29] = 77; //M Impossible[29]
+
+
+				System.out.print("The word you are guessing is 30 LETTERS LONG. There is no hint."
 						+ "\nPlease guess a letter for: ");
 			}
 		}
 		int[] ImpossibleBlank;
 		//Create Blank Array
-		ImpossibleBlank = new int [7];
+		ImpossibleBlank = new int [30];
 		ImpossibleBlank[0] = 42;
 		ImpossibleBlank[1] = 42;
 		ImpossibleBlank[2] = 42;
@@ -1141,13 +1187,38 @@ public class Ex735 {
 		ImpossibleBlank[4] = 42;
 		ImpossibleBlank[5] = 42;
 		ImpossibleBlank[6] = 42;
-		System.out.print(" ******* > ");
+		ImpossibleBlank[7] = 42;
+		ImpossibleBlank[8] = 42;
+		ImpossibleBlank[9] = 42;
+		ImpossibleBlank[10] = 42;
+		ImpossibleBlank[11] = 42;
+		ImpossibleBlank[12] = 42;
+		ImpossibleBlank[13] = 42;
+		ImpossibleBlank[14] = 42;
+		ImpossibleBlank[15] = 42;
+		ImpossibleBlank[16] = 42;
+		ImpossibleBlank[17] = 42;
+		ImpossibleBlank[18] = 42;
+		ImpossibleBlank[19] = 42;
+		ImpossibleBlank[20] = 42;
+		ImpossibleBlank[21] = 42;
+		ImpossibleBlank[22] = 42;
+		ImpossibleBlank[23] = 42;
+		ImpossibleBlank[24] = 42;
+		ImpossibleBlank[25] = 42;
+		ImpossibleBlank[26] = 42;
+		ImpossibleBlank[27] = 42;
+		ImpossibleBlank[28] = 42;
+		ImpossibleBlank[29] = 42;
+
+		System.out.print(" ****************************** > ");
 		guess = input.next();		
 		System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
 
 		char blank = ' ';
 		return blank;
 	}
+	//WARNING! CODE IS EXTREMELY LONG AND PROBABLY DONE THE WRONG WAY! ENTER WITH CAUTION
 	public static char ImpossibleModeBlanksCustomMethod(String guess, char[] Impossible, int[] ImpossibleBlank, int failurecount, int Hangman){
 		//System.out.println("Impossible Mode Blanks");
 		Scanner input = new Scanner(System.in); 
@@ -1184,139 +1255,103 @@ public class Ex735 {
 			System.out.println("Correct! There is a " + guess + "!");
 			System.out.print("Please guess a letter : ");
 		}
-		if (ImpossibleGuess == Impossible[0]){
+		if (ImpossibleGuess == Impossible[7]){
+			System.out.println("Correct! There is a " + guess + "!");
+			System.out.print("Please guess a letter : ");
+		}
+		if (ImpossibleGuess == Impossible[8]){
+			System.out.println("Correct! There is a " + guess + "!");
+			System.out.print("Please guess a letter : ");
+		}
+		if (ImpossibleGuess == Impossible[9]){
+			System.out.println("Correct! There is a " + guess + "!");
+			System.out.print("Please guess a letter : ");
+		}
+		if (ImpossibleGuess == Impossible[10]){
+			System.out.println("Correct! There is a " + guess + "!");
+			System.out.print("Please guess a letter : ");
+		}
+		if (ImpossibleGuess == Impossible[11]){
+			System.out.println("Correct! There is a " + guess + "!");
+			System.out.print("Please guess a letter : ");
+		}
+		if (ImpossibleGuess == Impossible[12]){
+			System.out.println("Correct! There is a " + guess + "!");
+			System.out.print("Please guess a letter : ");
+		}
+		if (ImpossibleGuess == Impossible[13]){
+			System.out.println("Correct! There is a " + guess + "!");
+			System.out.print("Please guess a letter : ");
+		}
+		if (ImpossibleGuess == Impossible[14]){
+			System.out.println("Correct! There is a " + guess + "!");
+			System.out.print("Please guess a letter : ");
+		}
+		if (ImpossibleGuess == Impossible[15]){
+			System.out.println("Correct! There is a " + guess + "!");
+			System.out.print("Please guess a letter : ");
+		}
+		if (ImpossibleGuess == Impossible[16]){
+			System.out.println("Correct! There is a " + guess + "!");
+			System.out.print("Please guess a letter : ");
+		}
+		if (ImpossibleGuess == Impossible[17]){
+			System.out.println("Correct! There is a " + guess + "!");
+			System.out.print("Please guess a letter : ");
+		}
+		if (ImpossibleGuess == Impossible[18]){
+			System.out.println("Correct! There is a " + guess + "!");
+			System.out.print("Please guess a letter : ");
+		}
+		if (ImpossibleGuess == Impossible[19]){
+			System.out.println("Correct! There is a " + guess + "!");
+			System.out.print("Please guess a letter : ");
+		}
+		if (ImpossibleGuess == Impossible[20]){
+			System.out.println("Correct! There is a " + guess + "!");
+			System.out.print("Please guess a letter : ");
+		}
+		if (ImpossibleGuess == Impossible[21]){
+			System.out.println("Correct! There is a " + guess + "!");
+			System.out.print("Please guess a letter : ");
+		}
+		if (ImpossibleGuess == Impossible[22]){
+			System.out.println("Correct! There is a " + guess + "!");
+			System.out.print("Please guess a letter : ");
+		}
+		if (ImpossibleGuess == Impossible[23]){
+			System.out.println("Correct! There is a " + guess + "!");
+			System.out.print("Please guess a letter : ");
+		}
+		if (ImpossibleGuess == Impossible[24]){
+			System.out.println("Correct! There is a " + guess + "!");
+			System.out.print("Please guess a letter : ");
+		}
+		if (ImpossibleGuess == Impossible[25]){
+			System.out.println("Correct! There is a " + guess + "!");
+			System.out.print("Please guess a letter : ");
+		}
+		if (ImpossibleGuess == Impossible[26]){
+			System.out.println("Correct! There is a " + guess + "!");
+			System.out.print("Please guess a letter : ");
+		}
+		if (ImpossibleGuess == Impossible[27]){
+			System.out.println("Correct! There is a " + guess + "!");
+			System.out.print("Please guess a letter : ");
+		}
+		if (ImpossibleGuess == Impossible[28]){
+			System.out.println("Correct! There is a " + guess + "!");
+			System.out.print("Please guess a letter : ");
+		}
+		if (ImpossibleGuess == Impossible[29]){
+			System.out.println("Correct! There is a " + guess + "!");
+			System.out.print("Please guess a letter : ");
+		}
+		if (ImpossibleGuess == Impossible[0]){ //P Impossible[6] Impossible[14] Impossible[16]
 			ImpossibleBlank[0] = Impossible[0];
-			System.out.print((char) ImpossibleBlank[0]);
-			System.out.print((char) ImpossibleBlank[1]);
-			System.out.print((char) ImpossibleBlank[2]);
-			System.out.print((char) ImpossibleBlank[3]);
-			System.out.print((char) ImpossibleBlank[4]);
-			System.out.print((char) ImpossibleBlank[5]);
-			System.out.print((char) ImpossibleBlank[6]);
-			if (ImpossibleBlank[1] == Impossible[1]){
-				if (ImpossibleBlank[2] == Impossible[2]){
-					if (ImpossibleBlank[3] == Impossible[3]){
-						if (ImpossibleBlank[4] == Impossible[4]){
-							if (ImpossibleBlank[5] == Impossible[5]){
-								if (ImpossibleBlank[6] == Impossible[6]){
-									System.out.print(DifficultyPickerCustomMethod(failurecount));	
-								}
-							}
-						}
-					}
-				}
-			}
-			System.out.print(" > ");
-			guess = input.next();	
-			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
-		}
-		if (ImpossibleGuess == Impossible[1]){
-			ImpossibleBlank[1] = Impossible[1];
-			ImpossibleBlank[4] = Impossible[4];
-			System.out.print((char) ImpossibleBlank[0]);
-			System.out.print((char) ImpossibleBlank[1]);
-			System.out.print((char) ImpossibleBlank[2]);
-			System.out.print((char) ImpossibleBlank[3]);
-			System.out.print((char) ImpossibleBlank[4]);
-			System.out.print((char) ImpossibleBlank[5]);
-			System.out.print((char) ImpossibleBlank[6]);
-			if (ImpossibleBlank[0] == Impossible[0]){
-				if (ImpossibleBlank[2] == Impossible[2]){
-					if (ImpossibleBlank[3] == Impossible[3]){
-						if (ImpossibleBlank[4] == Impossible[4]){
-							if (ImpossibleBlank[5] == Impossible[5]){
-								if (ImpossibleBlank[6] == Impossible[6]){
-									System.out.print(DifficultyPickerCustomMethod(failurecount));	
-								}
-							}
-						}
-					}
-				}
-			}
-			System.out.print(" > ");
-			guess = input.next();	
-			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
-		}
-		if (ImpossibleGuess == Impossible[2]){
-			ImpossibleBlank[2] = Impossible[2];
-			System.out.print((char) ImpossibleBlank[0]);
-			System.out.print((char) ImpossibleBlank[1]);
-			System.out.print((char) ImpossibleBlank[2]);
-			System.out.print((char) ImpossibleBlank[3]);
-			System.out.print((char) ImpossibleBlank[4]);
-			System.out.print((char) ImpossibleBlank[5]);
-			System.out.print((char) ImpossibleBlank[6]);
-			if (ImpossibleBlank[0] == Impossible[0]){
-				if (ImpossibleBlank[1] == Impossible[1]){
-					if (ImpossibleBlank[3] == Impossible[3]){
-						if (ImpossibleBlank[4] == Impossible[4]){
-							if (ImpossibleBlank[5] == Impossible[5]){
-								if (ImpossibleBlank[6] == Impossible[6]){
-									System.out.print(DifficultyPickerCustomMethod(failurecount));	
-								}
-							}
-						}
-					}
-				}
-			}
-			System.out.print(" > ");
-			guess = input.next();	
-			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
-		}
-		if (ImpossibleGuess == Impossible[3]){
-			ImpossibleBlank[3] = Impossible[3];
-			System.out.print((char) ImpossibleBlank[0]);
-			System.out.print((char) ImpossibleBlank[1]);
-			System.out.print((char) ImpossibleBlank[2]);
-			System.out.print((char) ImpossibleBlank[3]);
-			System.out.print((char) ImpossibleBlank[4]);
-			System.out.print((char) ImpossibleBlank[5]);
-			System.out.print((char) ImpossibleBlank[6]);
-			if (ImpossibleBlank[0] == Impossible[0]){
-				if (ImpossibleBlank[1] == Impossible[1]){
-					if (ImpossibleBlank[2] == Impossible[2]){
-						if (ImpossibleBlank[4] == Impossible[4]){
-							if (ImpossibleBlank[5] == Impossible[5]){
-								if (ImpossibleBlank[6] == Impossible[6]){
-									System.out.print(DifficultyPickerCustomMethod(failurecount));	
-								}
-							}
-						}
-					}
-				}
-			}
-			System.out.print(" > ");
-			guess = input.next();	
-			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
-		}
-		if (ImpossibleGuess == Impossible[5]){
-			ImpossibleBlank[5] = Impossible[5];
-			System.out.print((char) ImpossibleBlank[0]);
-			System.out.print((char) ImpossibleBlank[1]);
-			System.out.print((char) ImpossibleBlank[2]);
-			System.out.print((char) ImpossibleBlank[3]);
-			System.out.print((char) ImpossibleBlank[4]);
-			System.out.print((char) ImpossibleBlank[5]);
-			System.out.print((char) ImpossibleBlank[6]);
-			if (ImpossibleBlank[0] == Impossible[0]){
-				if (ImpossibleBlank[1] == Impossible[1]){
-					if (ImpossibleBlank[2] == Impossible[2]){
-						if (ImpossibleBlank[3] == Impossible[3]){
-							if (ImpossibleBlank[4] == Impossible[4]){
-								if (ImpossibleBlank[6] == Impossible[6]){
-									System.out.print(DifficultyPickerCustomMethod(failurecount));	
-								}
-							}
-						}
-					}
-				}
-			}
-			System.out.print(" > ");
-			guess = input.next();	
-			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
-		}
-		if (ImpossibleGuess == Impossible[6]){
 			ImpossibleBlank[6] = Impossible[6];
+			ImpossibleBlank[14] = Impossible[14];
+			ImpossibleBlank[16] = Impossible[16];
 			System.out.print((char) ImpossibleBlank[0]);
 			System.out.print((char) ImpossibleBlank[1]);
 			System.out.print((char) ImpossibleBlank[2]);
@@ -1324,13 +1359,1262 @@ public class Ex735 {
 			System.out.print((char) ImpossibleBlank[4]);
 			System.out.print((char) ImpossibleBlank[5]);
 			System.out.print((char) ImpossibleBlank[6]);
+			System.out.print((char) ImpossibleBlank[7]);
+			System.out.print((char) ImpossibleBlank[8]);
+			System.out.print((char) ImpossibleBlank[9]);
+			System.out.print((char) ImpossibleBlank[10]);
+			System.out.print((char) ImpossibleBlank[11]);
+			System.out.print((char) ImpossibleBlank[12]);
+			System.out.print((char) ImpossibleBlank[13]);
+			System.out.print((char) ImpossibleBlank[14]);
+			System.out.print((char) ImpossibleBlank[15]);
+			System.out.print((char) ImpossibleBlank[16]);
+			System.out.print((char) ImpossibleBlank[17]);
+			System.out.print((char) ImpossibleBlank[18]);
+			System.out.print((char) ImpossibleBlank[19]);
+			System.out.print((char) ImpossibleBlank[20]);
+			System.out.print((char) ImpossibleBlank[21]);
+			System.out.print((char) ImpossibleBlank[22]);
+			System.out.print((char) ImpossibleBlank[23]);
+			System.out.print((char) ImpossibleBlank[24]);
+			System.out.print((char) ImpossibleBlank[25]);
+			System.out.print((char) ImpossibleBlank[26]);
+			System.out.print((char) ImpossibleBlank[27]);
+			System.out.print((char) ImpossibleBlank[28]);
+			System.out.print((char) ImpossibleBlank[29]);
 			if (ImpossibleBlank[0] == Impossible[0]){
 				if (ImpossibleBlank[1] == Impossible[1]){
 					if (ImpossibleBlank[2] == Impossible[2]){
 						if (ImpossibleBlank[3] == Impossible[3]){
 							if (ImpossibleBlank[4] == Impossible[4]){
 								if (ImpossibleBlank[5] == Impossible[5]){
-									System.out.print(DifficultyPickerCustomMethod(failurecount));	
+									if (ImpossibleBlank[6] == Impossible[6]){
+										if (ImpossibleBlank[7] == Impossible[7]){
+											if (ImpossibleBlank[8] == Impossible[8]){
+												if (ImpossibleBlank[9] == Impossible[9]){
+													if (ImpossibleBlank[10] == Impossible[10]){
+														if (ImpossibleBlank[11] == Impossible[11]){
+															if (ImpossibleBlank[12] == Impossible[12]){
+																if (ImpossibleBlank[13] == Impossible[13]){
+																	if (ImpossibleBlank[14] == Impossible[14]){
+																		if (ImpossibleBlank[15] == Impossible[15]){
+																			if (ImpossibleBlank[16] == Impossible[16]){
+																				if (ImpossibleBlank[17] == Impossible[17]){
+																					if (ImpossibleBlank[18] == Impossible[18]){
+																						if (ImpossibleBlank[19] == Impossible[19]){
+																							if (ImpossibleBlank[20] == Impossible[20]){
+																								if (ImpossibleBlank[21] == Impossible[21]){
+																									if (ImpossibleBlank[22] == Impossible[22]){
+																										if (ImpossibleBlank[23] == Impossible[23]){
+																											if (ImpossibleBlank[24] == Impossible[24]){
+																												if (ImpossibleBlank[25] == Impossible[25]){
+																													if (ImpossibleBlank[26] == Impossible[26]){
+																														if (ImpossibleBlank[27] == Impossible[27]){
+																															if (ImpossibleBlank[28] == Impossible[28]){
+																																if (ImpossibleBlank[29] == Impossible[29]){
+																																	System.out.print(DifficultyPickerCustomMethod(failurecount));	
+																																}	
+																															}	
+																														}	
+																													}	
+																												}	
+																											}	
+																										}
+																									}	
+																								}
+																							}
+																						}	
+																					}	
+																				}
+																			}
+																		}
+																	}	
+																}
+															}
+														}
+													}	
+												}
+											}	
+										}	
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			System.out.print(" > ");
+			guess = input.next();	
+			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
+		}
+		if (ImpossibleGuess == Impossible[1]){ //S Impossible[7] Impossible[28]
+			ImpossibleBlank[1] = Impossible[1];
+			ImpossibleBlank[7] = Impossible[7];
+			ImpossibleBlank[28] = Impossible[28];
+			System.out.print((char) ImpossibleBlank[0]);
+			System.out.print((char) ImpossibleBlank[1]);
+			System.out.print((char) ImpossibleBlank[2]);
+			System.out.print((char) ImpossibleBlank[3]);
+			System.out.print((char) ImpossibleBlank[4]);
+			System.out.print((char) ImpossibleBlank[5]);
+			System.out.print((char) ImpossibleBlank[6]);
+			System.out.print((char) ImpossibleBlank[7]);
+			System.out.print((char) ImpossibleBlank[8]);
+			System.out.print((char) ImpossibleBlank[9]);
+			System.out.print((char) ImpossibleBlank[10]);
+			System.out.print((char) ImpossibleBlank[11]);
+			System.out.print((char) ImpossibleBlank[12]);
+			System.out.print((char) ImpossibleBlank[13]);
+			System.out.print((char) ImpossibleBlank[14]);
+			System.out.print((char) ImpossibleBlank[15]);
+			System.out.print((char) ImpossibleBlank[16]);
+			System.out.print((char) ImpossibleBlank[17]);
+			System.out.print((char) ImpossibleBlank[18]);
+			System.out.print((char) ImpossibleBlank[19]);
+			System.out.print((char) ImpossibleBlank[20]);
+			System.out.print((char) ImpossibleBlank[21]);
+			System.out.print((char) ImpossibleBlank[22]);
+			System.out.print((char) ImpossibleBlank[23]);
+			System.out.print((char) ImpossibleBlank[24]);
+			System.out.print((char) ImpossibleBlank[25]);
+			System.out.print((char) ImpossibleBlank[26]);
+			System.out.print((char) ImpossibleBlank[27]);
+			System.out.print((char) ImpossibleBlank[28]);
+			System.out.print((char) ImpossibleBlank[29]);
+			if (ImpossibleBlank[0] == Impossible[0]){
+				if (ImpossibleBlank[1] == Impossible[1]){
+					if (ImpossibleBlank[2] == Impossible[2]){
+						if (ImpossibleBlank[3] == Impossible[3]){
+							if (ImpossibleBlank[4] == Impossible[4]){
+								if (ImpossibleBlank[5] == Impossible[5]){
+									if (ImpossibleBlank[6] == Impossible[6]){
+										if (ImpossibleBlank[7] == Impossible[7]){
+											if (ImpossibleBlank[8] == Impossible[8]){
+												if (ImpossibleBlank[9] == Impossible[9]){
+													if (ImpossibleBlank[10] == Impossible[10]){
+														if (ImpossibleBlank[11] == Impossible[11]){
+															if (ImpossibleBlank[12] == Impossible[12]){
+																if (ImpossibleBlank[13] == Impossible[13]){
+																	if (ImpossibleBlank[14] == Impossible[14]){
+																		if (ImpossibleBlank[15] == Impossible[15]){
+																			if (ImpossibleBlank[16] == Impossible[16]){
+																				if (ImpossibleBlank[17] == Impossible[17]){
+																					if (ImpossibleBlank[18] == Impossible[18]){
+																						if (ImpossibleBlank[19] == Impossible[19]){
+																							if (ImpossibleBlank[20] == Impossible[20]){
+																								if (ImpossibleBlank[21] == Impossible[21]){
+																									if (ImpossibleBlank[22] == Impossible[22]){
+																										if (ImpossibleBlank[23] == Impossible[23]){
+																											if (ImpossibleBlank[24] == Impossible[24]){
+																												if (ImpossibleBlank[25] == Impossible[25]){
+																													if (ImpossibleBlank[26] == Impossible[26]){
+																														if (ImpossibleBlank[27] == Impossible[27]){
+																															if (ImpossibleBlank[28] == Impossible[28]){
+																																if (ImpossibleBlank[29] == Impossible[29]){
+																																	System.out.print(DifficultyPickerCustomMethod(failurecount));	
+																																}	
+																															}	
+																														}	
+																													}	
+																												}	
+																											}	
+																										}
+																									}	
+																								}
+																							}
+																						}	
+																					}	
+																				}
+																			}
+																		}
+																	}	
+																}
+															}
+														}
+													}	
+												}
+											}	
+										}	
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			System.out.print(" > ");
+			guess = input.next();	
+			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
+		}
+		if (ImpossibleGuess == Impossible[2]){ //E Impossible[8]
+			ImpossibleBlank[2] = Impossible[2];
+			ImpossibleBlank[8] = Impossible[8];
+			System.out.print((char) ImpossibleBlank[0]);
+			System.out.print((char) ImpossibleBlank[1]);
+			System.out.print((char) ImpossibleBlank[2]);
+			System.out.print((char) ImpossibleBlank[3]);
+			System.out.print((char) ImpossibleBlank[4]);
+			System.out.print((char) ImpossibleBlank[5]);
+			System.out.print((char) ImpossibleBlank[6]);
+			System.out.print((char) ImpossibleBlank[7]);
+			System.out.print((char) ImpossibleBlank[8]);
+			System.out.print((char) ImpossibleBlank[9]);
+			System.out.print((char) ImpossibleBlank[10]);
+			System.out.print((char) ImpossibleBlank[11]);
+			System.out.print((char) ImpossibleBlank[12]);
+			System.out.print((char) ImpossibleBlank[13]);
+			System.out.print((char) ImpossibleBlank[14]);
+			System.out.print((char) ImpossibleBlank[15]);
+			System.out.print((char) ImpossibleBlank[16]);
+			System.out.print((char) ImpossibleBlank[17]);
+			System.out.print((char) ImpossibleBlank[18]);
+			System.out.print((char) ImpossibleBlank[19]);
+			System.out.print((char) ImpossibleBlank[20]);
+			System.out.print((char) ImpossibleBlank[21]);
+			System.out.print((char) ImpossibleBlank[22]);
+			System.out.print((char) ImpossibleBlank[23]);
+			System.out.print((char) ImpossibleBlank[24]);
+			System.out.print((char) ImpossibleBlank[25]);
+			System.out.print((char) ImpossibleBlank[26]);
+			System.out.print((char) ImpossibleBlank[27]);
+			System.out.print((char) ImpossibleBlank[28]);
+			System.out.print((char) ImpossibleBlank[29]);
+			if (ImpossibleBlank[0] == Impossible[0]){
+				if (ImpossibleBlank[1] == Impossible[1]){
+					if (ImpossibleBlank[2] == Impossible[2]){
+						if (ImpossibleBlank[3] == Impossible[3]){
+							if (ImpossibleBlank[4] == Impossible[4]){
+								if (ImpossibleBlank[5] == Impossible[5]){
+									if (ImpossibleBlank[6] == Impossible[6]){
+										if (ImpossibleBlank[7] == Impossible[7]){
+											if (ImpossibleBlank[8] == Impossible[8]){
+												if (ImpossibleBlank[9] == Impossible[9]){
+													if (ImpossibleBlank[10] == Impossible[10]){
+														if (ImpossibleBlank[11] == Impossible[11]){
+															if (ImpossibleBlank[12] == Impossible[12]){
+																if (ImpossibleBlank[13] == Impossible[13]){
+																	if (ImpossibleBlank[14] == Impossible[14]){
+																		if (ImpossibleBlank[15] == Impossible[15]){
+																			if (ImpossibleBlank[16] == Impossible[16]){
+																				if (ImpossibleBlank[17] == Impossible[17]){
+																					if (ImpossibleBlank[18] == Impossible[18]){
+																						if (ImpossibleBlank[19] == Impossible[19]){
+																							if (ImpossibleBlank[20] == Impossible[20]){
+																								if (ImpossibleBlank[21] == Impossible[21]){
+																									if (ImpossibleBlank[22] == Impossible[22]){
+																										if (ImpossibleBlank[23] == Impossible[23]){
+																											if (ImpossibleBlank[24] == Impossible[24]){
+																												if (ImpossibleBlank[25] == Impossible[25]){
+																													if (ImpossibleBlank[26] == Impossible[26]){
+																														if (ImpossibleBlank[27] == Impossible[27]){
+																															if (ImpossibleBlank[28] == Impossible[28]){
+																																if (ImpossibleBlank[29] == Impossible[29]){
+																																	System.out.print(DifficultyPickerCustomMethod(failurecount));	
+																																}	
+																															}	
+																														}	
+																													}	
+																												}	
+																											}	
+																										}
+																									}	
+																								}
+																							}
+																						}	
+																					}	
+																				}
+																			}
+																		}
+																	}	
+																}
+															}
+														}
+													}	
+												}
+											}	
+										}	
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			System.out.print(" > ");
+			guess = input.next();	
+			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
+		}
+		if (ImpossibleGuess == Impossible[3]){ //U Impossible[9]
+			ImpossibleBlank[3] = Impossible[3];
+			ImpossibleBlank[9] = Impossible[9];
+			System.out.print((char) ImpossibleBlank[0]);
+			System.out.print((char) ImpossibleBlank[1]);
+			System.out.print((char) ImpossibleBlank[2]);
+			System.out.print((char) ImpossibleBlank[3]);
+			System.out.print((char) ImpossibleBlank[4]);
+			System.out.print((char) ImpossibleBlank[5]);
+			System.out.print((char) ImpossibleBlank[6]);
+			System.out.print((char) ImpossibleBlank[7]);
+			System.out.print((char) ImpossibleBlank[8]);
+			System.out.print((char) ImpossibleBlank[9]);
+			System.out.print((char) ImpossibleBlank[10]);
+			System.out.print((char) ImpossibleBlank[11]);
+			System.out.print((char) ImpossibleBlank[12]);
+			System.out.print((char) ImpossibleBlank[13]);
+			System.out.print((char) ImpossibleBlank[14]);
+			System.out.print((char) ImpossibleBlank[15]);
+			System.out.print((char) ImpossibleBlank[16]);
+			System.out.print((char) ImpossibleBlank[17]);
+			System.out.print((char) ImpossibleBlank[18]);
+			System.out.print((char) ImpossibleBlank[19]);
+			System.out.print((char) ImpossibleBlank[20]);
+			System.out.print((char) ImpossibleBlank[21]);
+			System.out.print((char) ImpossibleBlank[22]);
+			System.out.print((char) ImpossibleBlank[23]);
+			System.out.print((char) ImpossibleBlank[24]);
+			System.out.print((char) ImpossibleBlank[25]);
+			System.out.print((char) ImpossibleBlank[26]);
+			System.out.print((char) ImpossibleBlank[27]);
+			System.out.print((char) ImpossibleBlank[28]);
+			System.out.print((char) ImpossibleBlank[29]);
+			if (ImpossibleBlank[0] == Impossible[0]){
+				if (ImpossibleBlank[1] == Impossible[1]){
+					if (ImpossibleBlank[2] == Impossible[2]){
+						if (ImpossibleBlank[3] == Impossible[3]){
+							if (ImpossibleBlank[4] == Impossible[4]){
+								if (ImpossibleBlank[5] == Impossible[5]){
+									if (ImpossibleBlank[6] == Impossible[6]){
+										if (ImpossibleBlank[7] == Impossible[7]){
+											if (ImpossibleBlank[8] == Impossible[8]){
+												if (ImpossibleBlank[9] == Impossible[9]){
+													if (ImpossibleBlank[10] == Impossible[10]){
+														if (ImpossibleBlank[11] == Impossible[11]){
+															if (ImpossibleBlank[12] == Impossible[12]){
+																if (ImpossibleBlank[13] == Impossible[13]){
+																	if (ImpossibleBlank[14] == Impossible[14]){
+																		if (ImpossibleBlank[15] == Impossible[15]){
+																			if (ImpossibleBlank[16] == Impossible[16]){
+																				if (ImpossibleBlank[17] == Impossible[17]){
+																					if (ImpossibleBlank[18] == Impossible[18]){
+																						if (ImpossibleBlank[19] == Impossible[19]){
+																							if (ImpossibleBlank[20] == Impossible[20]){
+																								if (ImpossibleBlank[21] == Impossible[21]){
+																									if (ImpossibleBlank[22] == Impossible[22]){
+																										if (ImpossibleBlank[23] == Impossible[23]){
+																											if (ImpossibleBlank[24] == Impossible[24]){
+																												if (ImpossibleBlank[25] == Impossible[25]){
+																													if (ImpossibleBlank[26] == Impossible[26]){
+																														if (ImpossibleBlank[27] == Impossible[27]){
+																															if (ImpossibleBlank[28] == Impossible[28]){
+																																if (ImpossibleBlank[29] == Impossible[29]){
+																																	System.out.print(DifficultyPickerCustomMethod(failurecount));	
+																																}	
+																															}	
+																														}	
+																													}	
+																												}	
+																											}	
+																										}
+																									}	
+																								}
+																							}
+																						}	
+																					}	
+																				}
+																			}
+																		}
+																	}	
+																}
+															}
+														}
+													}	
+												}
+											}	
+										}	
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			System.out.print(" > ");
+			guess = input.next();	
+			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
+		}
+		if (ImpossibleGuess == Impossible[4]){ //D Impossible[10] Impossible[26]
+			ImpossibleBlank[4] = Impossible[4];
+			ImpossibleBlank[10] = Impossible[10];
+			ImpossibleBlank[26] = Impossible[26];
+			System.out.print((char) ImpossibleBlank[0]);
+			System.out.print((char) ImpossibleBlank[1]);
+			System.out.print((char) ImpossibleBlank[2]);
+			System.out.print((char) ImpossibleBlank[3]);
+			System.out.print((char) ImpossibleBlank[4]);
+			System.out.print((char) ImpossibleBlank[5]);
+			System.out.print((char) ImpossibleBlank[6]);
+			System.out.print((char) ImpossibleBlank[7]);
+			System.out.print((char) ImpossibleBlank[8]);
+			System.out.print((char) ImpossibleBlank[9]);
+			System.out.print((char) ImpossibleBlank[10]);
+			System.out.print((char) ImpossibleBlank[11]);
+			System.out.print((char) ImpossibleBlank[12]);
+			System.out.print((char) ImpossibleBlank[13]);
+			System.out.print((char) ImpossibleBlank[14]);
+			System.out.print((char) ImpossibleBlank[15]);
+			System.out.print((char) ImpossibleBlank[16]);
+			System.out.print((char) ImpossibleBlank[17]);
+			System.out.print((char) ImpossibleBlank[18]);
+			System.out.print((char) ImpossibleBlank[19]);
+			System.out.print((char) ImpossibleBlank[20]);
+			System.out.print((char) ImpossibleBlank[21]);
+			System.out.print((char) ImpossibleBlank[22]);
+			System.out.print((char) ImpossibleBlank[23]);
+			System.out.print((char) ImpossibleBlank[24]);
+			System.out.print((char) ImpossibleBlank[25]);
+			System.out.print((char) ImpossibleBlank[26]);
+			System.out.print((char) ImpossibleBlank[27]);
+			System.out.print((char) ImpossibleBlank[28]);
+			System.out.print((char) ImpossibleBlank[29]);
+			if (ImpossibleBlank[0] == Impossible[0]){
+				if (ImpossibleBlank[1] == Impossible[1]){
+					if (ImpossibleBlank[2] == Impossible[2]){
+						if (ImpossibleBlank[3] == Impossible[3]){
+							if (ImpossibleBlank[4] == Impossible[4]){
+								if (ImpossibleBlank[5] == Impossible[5]){
+									if (ImpossibleBlank[6] == Impossible[6]){
+										if (ImpossibleBlank[7] == Impossible[7]){
+											if (ImpossibleBlank[8] == Impossible[8]){
+												if (ImpossibleBlank[9] == Impossible[9]){
+													if (ImpossibleBlank[10] == Impossible[10]){
+														if (ImpossibleBlank[11] == Impossible[11]){
+															if (ImpossibleBlank[12] == Impossible[12]){
+																if (ImpossibleBlank[13] == Impossible[13]){
+																	if (ImpossibleBlank[14] == Impossible[14]){
+																		if (ImpossibleBlank[15] == Impossible[15]){
+																			if (ImpossibleBlank[16] == Impossible[16]){
+																				if (ImpossibleBlank[17] == Impossible[17]){
+																					if (ImpossibleBlank[18] == Impossible[18]){
+																						if (ImpossibleBlank[19] == Impossible[19]){
+																							if (ImpossibleBlank[20] == Impossible[20]){
+																								if (ImpossibleBlank[21] == Impossible[21]){
+																									if (ImpossibleBlank[22] == Impossible[22]){
+																										if (ImpossibleBlank[23] == Impossible[23]){
+																											if (ImpossibleBlank[24] == Impossible[24]){
+																												if (ImpossibleBlank[25] == Impossible[25]){
+																													if (ImpossibleBlank[26] == Impossible[26]){
+																														if (ImpossibleBlank[27] == Impossible[27]){
+																															if (ImpossibleBlank[28] == Impossible[28]){
+																																if (ImpossibleBlank[29] == Impossible[29]){
+																																	System.out.print(DifficultyPickerCustomMethod(failurecount));	
+																																}	
+																															}	
+																														}	
+																													}	
+																												}	
+																											}	
+																										}
+																									}	
+																								}
+																							}
+																						}	
+																					}	
+																				}
+																			}
+																		}
+																	}	
+																}
+															}
+														}
+													}	
+												}
+											}	
+										}	
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			System.out.print(" > ");
+			guess = input.next();	
+			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
+		}
+		if (ImpossibleGuess == Impossible[5]){ //O Impossible[11] Impossible[15] Impossible[24]
+			ImpossibleBlank[5] = Impossible[5];
+			ImpossibleBlank[11] = Impossible[11];
+			ImpossibleBlank[15] = Impossible[15];
+			ImpossibleBlank[24] = Impossible[24];
+			System.out.print((char) ImpossibleBlank[0]);
+			System.out.print((char) ImpossibleBlank[1]);
+			System.out.print((char) ImpossibleBlank[2]);
+			System.out.print((char) ImpossibleBlank[3]);
+			System.out.print((char) ImpossibleBlank[4]);
+			System.out.print((char) ImpossibleBlank[5]);
+			System.out.print((char) ImpossibleBlank[6]);
+			System.out.print((char) ImpossibleBlank[7]);
+			System.out.print((char) ImpossibleBlank[8]);
+			System.out.print((char) ImpossibleBlank[9]);
+			System.out.print((char) ImpossibleBlank[10]);
+			System.out.print((char) ImpossibleBlank[11]);
+			System.out.print((char) ImpossibleBlank[12]);
+			System.out.print((char) ImpossibleBlank[13]);
+			System.out.print((char) ImpossibleBlank[14]);
+			System.out.print((char) ImpossibleBlank[15]);
+			System.out.print((char) ImpossibleBlank[16]);
+			System.out.print((char) ImpossibleBlank[17]);
+			System.out.print((char) ImpossibleBlank[18]);
+			System.out.print((char) ImpossibleBlank[19]);
+			System.out.print((char) ImpossibleBlank[20]);
+			System.out.print((char) ImpossibleBlank[21]);
+			System.out.print((char) ImpossibleBlank[22]);
+			System.out.print((char) ImpossibleBlank[23]);
+			System.out.print((char) ImpossibleBlank[24]);
+			System.out.print((char) ImpossibleBlank[25]);
+			System.out.print((char) ImpossibleBlank[26]);
+			System.out.print((char) ImpossibleBlank[27]);
+			System.out.print((char) ImpossibleBlank[28]);
+			System.out.print((char) ImpossibleBlank[29]);
+			if (ImpossibleBlank[0] == Impossible[0]){
+				if (ImpossibleBlank[1] == Impossible[1]){
+					if (ImpossibleBlank[2] == Impossible[2]){
+						if (ImpossibleBlank[3] == Impossible[3]){
+							if (ImpossibleBlank[4] == Impossible[4]){
+								if (ImpossibleBlank[5] == Impossible[5]){
+									if (ImpossibleBlank[6] == Impossible[6]){
+										if (ImpossibleBlank[7] == Impossible[7]){
+											if (ImpossibleBlank[8] == Impossible[8]){
+												if (ImpossibleBlank[9] == Impossible[9]){
+													if (ImpossibleBlank[10] == Impossible[10]){
+														if (ImpossibleBlank[11] == Impossible[11]){
+															if (ImpossibleBlank[12] == Impossible[12]){
+																if (ImpossibleBlank[13] == Impossible[13]){
+																	if (ImpossibleBlank[14] == Impossible[14]){
+																		if (ImpossibleBlank[15] == Impossible[15]){
+																			if (ImpossibleBlank[16] == Impossible[16]){
+																				if (ImpossibleBlank[17] == Impossible[17]){
+																					if (ImpossibleBlank[18] == Impossible[18]){
+																						if (ImpossibleBlank[19] == Impossible[19]){
+																							if (ImpossibleBlank[20] == Impossible[20]){
+																								if (ImpossibleBlank[21] == Impossible[21]){
+																									if (ImpossibleBlank[22] == Impossible[22]){
+																										if (ImpossibleBlank[23] == Impossible[23]){
+																											if (ImpossibleBlank[24] == Impossible[24]){
+																												if (ImpossibleBlank[25] == Impossible[25]){
+																													if (ImpossibleBlank[26] == Impossible[26]){
+																														if (ImpossibleBlank[27] == Impossible[27]){
+																															if (ImpossibleBlank[28] == Impossible[28]){
+																																if (ImpossibleBlank[29] == Impossible[29]){
+																																	System.out.print(DifficultyPickerCustomMethod(failurecount));	
+																																}	
+																															}	
+																														}	
+																													}	
+																												}	
+																											}	
+																										}
+																									}	
+																								}
+																							}
+																						}	
+																					}	
+																				}
+																			}
+																		}
+																	}	
+																}
+															}
+														}
+													}	
+												}
+											}	
+										}	
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			System.out.print(" > ");
+			guess = input.next();	
+			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
+		}
+		if (ImpossibleGuess == Impossible[12]){ //H Impossible[21]
+			ImpossibleBlank[12] = Impossible[12];
+			ImpossibleBlank[21] = Impossible[21];
+			System.out.print((char) ImpossibleBlank[0]);
+			System.out.print((char) ImpossibleBlank[1]);
+			System.out.print((char) ImpossibleBlank[2]);
+			System.out.print((char) ImpossibleBlank[3]);
+			System.out.print((char) ImpossibleBlank[4]);
+			System.out.print((char) ImpossibleBlank[5]);
+			System.out.print((char) ImpossibleBlank[6]);
+			System.out.print((char) ImpossibleBlank[7]);
+			System.out.print((char) ImpossibleBlank[8]);
+			System.out.print((char) ImpossibleBlank[9]);
+			System.out.print((char) ImpossibleBlank[10]);
+			System.out.print((char) ImpossibleBlank[11]);
+			System.out.print((char) ImpossibleBlank[12]);
+			System.out.print((char) ImpossibleBlank[13]);
+			System.out.print((char) ImpossibleBlank[14]);
+			System.out.print((char) ImpossibleBlank[15]);
+			System.out.print((char) ImpossibleBlank[16]);
+			System.out.print((char) ImpossibleBlank[17]);
+			System.out.print((char) ImpossibleBlank[18]);
+			System.out.print((char) ImpossibleBlank[19]);
+			System.out.print((char) ImpossibleBlank[20]);
+			System.out.print((char) ImpossibleBlank[21]);
+			System.out.print((char) ImpossibleBlank[22]);
+			System.out.print((char) ImpossibleBlank[23]);
+			System.out.print((char) ImpossibleBlank[24]);
+			System.out.print((char) ImpossibleBlank[25]);
+			System.out.print((char) ImpossibleBlank[26]);
+			System.out.print((char) ImpossibleBlank[27]);
+			System.out.print((char) ImpossibleBlank[28]);
+			System.out.print((char) ImpossibleBlank[29]);
+			if (ImpossibleBlank[0] == Impossible[0]){
+				if (ImpossibleBlank[1] == Impossible[1]){
+					if (ImpossibleBlank[2] == Impossible[2]){
+						if (ImpossibleBlank[3] == Impossible[3]){
+							if (ImpossibleBlank[4] == Impossible[4]){
+								if (ImpossibleBlank[5] == Impossible[5]){
+									if (ImpossibleBlank[6] == Impossible[6]){
+										if (ImpossibleBlank[7] == Impossible[7]){
+											if (ImpossibleBlank[8] == Impossible[8]){
+												if (ImpossibleBlank[9] == Impossible[9]){
+													if (ImpossibleBlank[10] == Impossible[10]){
+														if (ImpossibleBlank[11] == Impossible[11]){
+															if (ImpossibleBlank[12] == Impossible[12]){
+																if (ImpossibleBlank[13] == Impossible[13]){
+																	if (ImpossibleBlank[14] == Impossible[14]){
+																		if (ImpossibleBlank[15] == Impossible[15]){
+																			if (ImpossibleBlank[16] == Impossible[16]){
+																				if (ImpossibleBlank[17] == Impossible[17]){
+																					if (ImpossibleBlank[18] == Impossible[18]){
+																						if (ImpossibleBlank[19] == Impossible[19]){
+																							if (ImpossibleBlank[20] == Impossible[20]){
+																								if (ImpossibleBlank[21] == Impossible[21]){
+																									if (ImpossibleBlank[22] == Impossible[22]){
+																										if (ImpossibleBlank[23] == Impossible[23]){
+																											if (ImpossibleBlank[24] == Impossible[24]){
+																												if (ImpossibleBlank[25] == Impossible[25]){
+																													if (ImpossibleBlank[26] == Impossible[26]){
+																														if (ImpossibleBlank[27] == Impossible[27]){
+																															if (ImpossibleBlank[28] == Impossible[28]){
+																																if (ImpossibleBlank[29] == Impossible[29]){
+																																	System.out.print(DifficultyPickerCustomMethod(failurecount));	
+																																}	
+																															}	
+																														}	
+																													}	
+																												}	
+																											}	
+																										}
+																									}	
+																								}
+																							}
+																						}	
+																					}	
+																				}
+																			}
+																		}
+																	}	
+																}
+															}
+														}
+													}	
+												}
+											}	
+										}	
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			System.out.print(" > ");
+			guess = input.next();	
+			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
+		}
+		if (ImpossibleGuess == Impossible[13]){ //Y Impossible[22]
+			ImpossibleBlank[13] = Impossible[13];
+			ImpossibleBlank[22] = Impossible[22];
+			System.out.print((char) ImpossibleBlank[0]);
+			System.out.print((char) ImpossibleBlank[1]);
+			System.out.print((char) ImpossibleBlank[2]);
+			System.out.print((char) ImpossibleBlank[3]);
+			System.out.print((char) ImpossibleBlank[4]);
+			System.out.print((char) ImpossibleBlank[5]);
+			System.out.print((char) ImpossibleBlank[6]);
+			System.out.print((char) ImpossibleBlank[7]);
+			System.out.print((char) ImpossibleBlank[8]);
+			System.out.print((char) ImpossibleBlank[9]);
+			System.out.print((char) ImpossibleBlank[10]);
+			System.out.print((char) ImpossibleBlank[11]);
+			System.out.print((char) ImpossibleBlank[12]);
+			System.out.print((char) ImpossibleBlank[13]);
+			System.out.print((char) ImpossibleBlank[14]);
+			System.out.print((char) ImpossibleBlank[15]);
+			System.out.print((char) ImpossibleBlank[16]);
+			System.out.print((char) ImpossibleBlank[17]);
+			System.out.print((char) ImpossibleBlank[18]);
+			System.out.print((char) ImpossibleBlank[19]);
+			System.out.print((char) ImpossibleBlank[20]);
+			System.out.print((char) ImpossibleBlank[21]);
+			System.out.print((char) ImpossibleBlank[22]);
+			System.out.print((char) ImpossibleBlank[23]);
+			System.out.print((char) ImpossibleBlank[24]);
+			System.out.print((char) ImpossibleBlank[25]);
+			System.out.print((char) ImpossibleBlank[26]);
+			System.out.print((char) ImpossibleBlank[27]);
+			System.out.print((char) ImpossibleBlank[28]);
+			System.out.print((char) ImpossibleBlank[29]);
+			if (ImpossibleBlank[0] == Impossible[0]){
+				if (ImpossibleBlank[1] == Impossible[1]){
+					if (ImpossibleBlank[2] == Impossible[2]){
+						if (ImpossibleBlank[3] == Impossible[3]){
+							if (ImpossibleBlank[4] == Impossible[4]){
+								if (ImpossibleBlank[5] == Impossible[5]){
+									if (ImpossibleBlank[6] == Impossible[6]){
+										if (ImpossibleBlank[7] == Impossible[7]){
+											if (ImpossibleBlank[8] == Impossible[8]){
+												if (ImpossibleBlank[9] == Impossible[9]){
+													if (ImpossibleBlank[10] == Impossible[10]){
+														if (ImpossibleBlank[11] == Impossible[11]){
+															if (ImpossibleBlank[12] == Impossible[12]){
+																if (ImpossibleBlank[13] == Impossible[13]){
+																	if (ImpossibleBlank[14] == Impossible[14]){
+																		if (ImpossibleBlank[15] == Impossible[15]){
+																			if (ImpossibleBlank[16] == Impossible[16]){
+																				if (ImpossibleBlank[17] == Impossible[17]){
+																					if (ImpossibleBlank[18] == Impossible[18]){
+																						if (ImpossibleBlank[19] == Impossible[19]){
+																							if (ImpossibleBlank[20] == Impossible[20]){
+																								if (ImpossibleBlank[21] == Impossible[21]){
+																									if (ImpossibleBlank[22] == Impossible[22]){
+																										if (ImpossibleBlank[23] == Impossible[23]){
+																											if (ImpossibleBlank[24] == Impossible[24]){
+																												if (ImpossibleBlank[25] == Impossible[25]){
+																													if (ImpossibleBlank[26] == Impossible[26]){
+																														if (ImpossibleBlank[27] == Impossible[27]){
+																															if (ImpossibleBlank[28] == Impossible[28]){
+																																if (ImpossibleBlank[29] == Impossible[29]){
+																																	System.out.print(DifficultyPickerCustomMethod(failurecount));	
+																																}	
+																															}	
+																														}	
+																													}	
+																												}	
+																											}	
+																										}
+																									}	
+																								}
+																							}
+																						}	
+																					}	
+																				}
+																			}
+																		}
+																	}	
+																}
+															}
+														}
+													}	
+												}
+											}	
+										}	
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			System.out.print(" > ");
+			guess = input.next();	
+			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
+		}
+		if (ImpossibleGuess == Impossible[17]){ //A Impossible[19]
+			ImpossibleBlank[17] = Impossible[17];
+			ImpossibleBlank[19] = Impossible[19];
+			System.out.print((char) ImpossibleBlank[0]);
+			System.out.print((char) ImpossibleBlank[1]);
+			System.out.print((char) ImpossibleBlank[2]);
+			System.out.print((char) ImpossibleBlank[3]);
+			System.out.print((char) ImpossibleBlank[4]);
+			System.out.print((char) ImpossibleBlank[5]);
+			System.out.print((char) ImpossibleBlank[6]);
+			System.out.print((char) ImpossibleBlank[7]);
+			System.out.print((char) ImpossibleBlank[8]);
+			System.out.print((char) ImpossibleBlank[9]);
+			System.out.print((char) ImpossibleBlank[10]);
+			System.out.print((char) ImpossibleBlank[11]);
+			System.out.print((char) ImpossibleBlank[12]);
+			System.out.print((char) ImpossibleBlank[13]);
+			System.out.print((char) ImpossibleBlank[14]);
+			System.out.print((char) ImpossibleBlank[15]);
+			System.out.print((char) ImpossibleBlank[16]);
+			System.out.print((char) ImpossibleBlank[17]);
+			System.out.print((char) ImpossibleBlank[18]);
+			System.out.print((char) ImpossibleBlank[19]);
+			System.out.print((char) ImpossibleBlank[20]);
+			System.out.print((char) ImpossibleBlank[21]);
+			System.out.print((char) ImpossibleBlank[22]);
+			System.out.print((char) ImpossibleBlank[23]);
+			System.out.print((char) ImpossibleBlank[24]);
+			System.out.print((char) ImpossibleBlank[25]);
+			System.out.print((char) ImpossibleBlank[26]);
+			System.out.print((char) ImpossibleBlank[27]);
+			System.out.print((char) ImpossibleBlank[28]);
+			System.out.print((char) ImpossibleBlank[29]);
+			if (ImpossibleBlank[0] == Impossible[0]){
+				if (ImpossibleBlank[1] == Impossible[1]){
+					if (ImpossibleBlank[2] == Impossible[2]){
+						if (ImpossibleBlank[3] == Impossible[3]){
+							if (ImpossibleBlank[4] == Impossible[4]){
+								if (ImpossibleBlank[5] == Impossible[5]){
+									if (ImpossibleBlank[6] == Impossible[6]){
+										if (ImpossibleBlank[7] == Impossible[7]){
+											if (ImpossibleBlank[8] == Impossible[8]){
+												if (ImpossibleBlank[9] == Impossible[9]){
+													if (ImpossibleBlank[10] == Impossible[10]){
+														if (ImpossibleBlank[11] == Impossible[11]){
+															if (ImpossibleBlank[12] == Impossible[12]){
+																if (ImpossibleBlank[13] == Impossible[13]){
+																	if (ImpossibleBlank[14] == Impossible[14]){
+																		if (ImpossibleBlank[15] == Impossible[15]){
+																			if (ImpossibleBlank[16] == Impossible[16]){
+																				if (ImpossibleBlank[17] == Impossible[17]){
+																					if (ImpossibleBlank[18] == Impossible[18]){
+																						if (ImpossibleBlank[19] == Impossible[19]){
+																							if (ImpossibleBlank[20] == Impossible[20]){
+																								if (ImpossibleBlank[21] == Impossible[21]){
+																									if (ImpossibleBlank[22] == Impossible[22]){
+																										if (ImpossibleBlank[23] == Impossible[23]){
+																											if (ImpossibleBlank[24] == Impossible[24]){
+																												if (ImpossibleBlank[25] == Impossible[25]){
+																													if (ImpossibleBlank[26] == Impossible[26]){
+																														if (ImpossibleBlank[27] == Impossible[27]){
+																															if (ImpossibleBlank[28] == Impossible[28]){
+																																if (ImpossibleBlank[29] == Impossible[29]){
+																																	System.out.print(DifficultyPickerCustomMethod(failurecount));	
+																																}	
+																															}	
+																														}	
+																													}	
+																												}	
+																											}	
+																										}
+																									}	
+																								}
+																							}
+																						}	
+																					}	
+																				}
+																			}
+																		}
+																	}	
+																}
+															}
+														}
+													}	
+												}
+											}	
+										}	
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			System.out.print(" > ");
+			guess = input.next();	
+			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
+		}
+		if (ImpossibleGuess == Impossible[18]){ //R Impossible[23]
+			ImpossibleBlank[18] = Impossible[18];
+			ImpossibleBlank[23] = Impossible[23];
+			System.out.print((char) ImpossibleBlank[0]);
+			System.out.print((char) ImpossibleBlank[1]);
+			System.out.print((char) ImpossibleBlank[2]);
+			System.out.print((char) ImpossibleBlank[3]);
+			System.out.print((char) ImpossibleBlank[4]);
+			System.out.print((char) ImpossibleBlank[5]);
+			System.out.print((char) ImpossibleBlank[6]);
+			System.out.print((char) ImpossibleBlank[7]);
+			System.out.print((char) ImpossibleBlank[8]);
+			System.out.print((char) ImpossibleBlank[9]);
+			System.out.print((char) ImpossibleBlank[10]);
+			System.out.print((char) ImpossibleBlank[11]);
+			System.out.print((char) ImpossibleBlank[12]);
+			System.out.print((char) ImpossibleBlank[13]);
+			System.out.print((char) ImpossibleBlank[14]);
+			System.out.print((char) ImpossibleBlank[15]);
+			System.out.print((char) ImpossibleBlank[16]);
+			System.out.print((char) ImpossibleBlank[17]);
+			System.out.print((char) ImpossibleBlank[18]);
+			System.out.print((char) ImpossibleBlank[19]);
+			System.out.print((char) ImpossibleBlank[20]);
+			System.out.print((char) ImpossibleBlank[21]);
+			System.out.print((char) ImpossibleBlank[22]);
+			System.out.print((char) ImpossibleBlank[23]);
+			System.out.print((char) ImpossibleBlank[24]);
+			System.out.print((char) ImpossibleBlank[25]);
+			System.out.print((char) ImpossibleBlank[26]);
+			System.out.print((char) ImpossibleBlank[27]);
+			System.out.print((char) ImpossibleBlank[28]);
+			System.out.print((char) ImpossibleBlank[29]);
+			if (ImpossibleBlank[0] == Impossible[0]){
+				if (ImpossibleBlank[1] == Impossible[1]){
+					if (ImpossibleBlank[2] == Impossible[2]){
+						if (ImpossibleBlank[3] == Impossible[3]){
+							if (ImpossibleBlank[4] == Impossible[4]){
+								if (ImpossibleBlank[5] == Impossible[5]){
+									if (ImpossibleBlank[6] == Impossible[6]){
+										if (ImpossibleBlank[7] == Impossible[7]){
+											if (ImpossibleBlank[8] == Impossible[8]){
+												if (ImpossibleBlank[9] == Impossible[9]){
+													if (ImpossibleBlank[10] == Impossible[10]){
+														if (ImpossibleBlank[11] == Impossible[11]){
+															if (ImpossibleBlank[12] == Impossible[12]){
+																if (ImpossibleBlank[13] == Impossible[13]){
+																	if (ImpossibleBlank[14] == Impossible[14]){
+																		if (ImpossibleBlank[15] == Impossible[15]){
+																			if (ImpossibleBlank[16] == Impossible[16]){
+																				if (ImpossibleBlank[17] == Impossible[17]){
+																					if (ImpossibleBlank[18] == Impossible[18]){
+																						if (ImpossibleBlank[19] == Impossible[19]){
+																							if (ImpossibleBlank[20] == Impossible[20]){
+																								if (ImpossibleBlank[21] == Impossible[21]){
+																									if (ImpossibleBlank[22] == Impossible[22]){
+																										if (ImpossibleBlank[23] == Impossible[23]){
+																											if (ImpossibleBlank[24] == Impossible[24]){
+																												if (ImpossibleBlank[25] == Impossible[25]){
+																													if (ImpossibleBlank[26] == Impossible[26]){
+																														if (ImpossibleBlank[27] == Impossible[27]){
+																															if (ImpossibleBlank[28] == Impossible[28]){
+																																if (ImpossibleBlank[29] == Impossible[29]){
+																																	System.out.print(DifficultyPickerCustomMethod(failurecount));	
+																																}	
+																															}	
+																														}	
+																													}	
+																												}	
+																											}	
+																										}
+																									}	
+																								}
+																							}
+																						}	
+																					}	
+																				}
+																			}
+																		}
+																	}	
+																}
+															}
+														}
+													}	
+												}
+											}	
+										}	
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			System.out.print(" > ");
+			guess = input.next();	
+			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
+		}
+		if (ImpossibleGuess == Impossible[20]){ //T Impossible[20]
+			ImpossibleBlank[20] = Impossible[20];
+			System.out.print((char) ImpossibleBlank[0]);
+			System.out.print((char) ImpossibleBlank[1]);
+			System.out.print((char) ImpossibleBlank[2]);
+			System.out.print((char) ImpossibleBlank[3]);
+			System.out.print((char) ImpossibleBlank[4]);
+			System.out.print((char) ImpossibleBlank[5]);
+			System.out.print((char) ImpossibleBlank[6]);
+			System.out.print((char) ImpossibleBlank[7]);
+			System.out.print((char) ImpossibleBlank[8]);
+			System.out.print((char) ImpossibleBlank[9]);
+			System.out.print((char) ImpossibleBlank[10]);
+			System.out.print((char) ImpossibleBlank[11]);
+			System.out.print((char) ImpossibleBlank[12]);
+			System.out.print((char) ImpossibleBlank[13]);
+			System.out.print((char) ImpossibleBlank[14]);
+			System.out.print((char) ImpossibleBlank[15]);
+			System.out.print((char) ImpossibleBlank[16]);
+			System.out.print((char) ImpossibleBlank[17]);
+			System.out.print((char) ImpossibleBlank[18]);
+			System.out.print((char) ImpossibleBlank[19]);
+			System.out.print((char) ImpossibleBlank[20]);
+			System.out.print((char) ImpossibleBlank[21]);
+			System.out.print((char) ImpossibleBlank[22]);
+			System.out.print((char) ImpossibleBlank[23]);
+			System.out.print((char) ImpossibleBlank[24]);
+			System.out.print((char) ImpossibleBlank[25]);
+			System.out.print((char) ImpossibleBlank[26]);
+			System.out.print((char) ImpossibleBlank[27]);
+			System.out.print((char) ImpossibleBlank[28]);
+			System.out.print((char) ImpossibleBlank[29]);
+			if (ImpossibleBlank[0] == Impossible[0]){
+				if (ImpossibleBlank[1] == Impossible[1]){
+					if (ImpossibleBlank[2] == Impossible[2]){
+						if (ImpossibleBlank[3] == Impossible[3]){
+							if (ImpossibleBlank[4] == Impossible[4]){
+								if (ImpossibleBlank[5] == Impossible[5]){
+									if (ImpossibleBlank[6] == Impossible[6]){
+										if (ImpossibleBlank[7] == Impossible[7]){
+											if (ImpossibleBlank[8] == Impossible[8]){
+												if (ImpossibleBlank[9] == Impossible[9]){
+													if (ImpossibleBlank[10] == Impossible[10]){
+														if (ImpossibleBlank[11] == Impossible[11]){
+															if (ImpossibleBlank[12] == Impossible[12]){
+																if (ImpossibleBlank[13] == Impossible[13]){
+																	if (ImpossibleBlank[14] == Impossible[14]){
+																		if (ImpossibleBlank[15] == Impossible[15]){
+																			if (ImpossibleBlank[16] == Impossible[16]){
+																				if (ImpossibleBlank[17] == Impossible[17]){
+																					if (ImpossibleBlank[18] == Impossible[18]){
+																						if (ImpossibleBlank[19] == Impossible[19]){
+																							if (ImpossibleBlank[20] == Impossible[20]){
+																								if (ImpossibleBlank[21] == Impossible[21]){
+																									if (ImpossibleBlank[22] == Impossible[22]){
+																										if (ImpossibleBlank[23] == Impossible[23]){
+																											if (ImpossibleBlank[24] == Impossible[24]){
+																												if (ImpossibleBlank[25] == Impossible[25]){
+																													if (ImpossibleBlank[26] == Impossible[26]){
+																														if (ImpossibleBlank[27] == Impossible[27]){
+																															if (ImpossibleBlank[28] == Impossible[28]){
+																																if (ImpossibleBlank[29] == Impossible[29]){
+																																	System.out.print(DifficultyPickerCustomMethod(failurecount));	
+																																}	
+																															}	
+																														}	
+																													}	
+																												}	
+																											}	
+																										}
+																									}	
+																								}
+																							}
+																						}	
+																					}	
+																				}
+																			}
+																		}
+																	}	
+																}
+															}
+														}
+													}	
+												}
+											}	
+										}	
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			System.out.print(" > ");
+			guess = input.next();	
+			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
+		}
+		if (ImpossibleGuess == Impossible[25]){ //I Impossible[27]
+			ImpossibleBlank[25] = Impossible[25];
+			ImpossibleBlank[27] = Impossible[27];
+			System.out.print((char) ImpossibleBlank[0]);
+			System.out.print((char) ImpossibleBlank[1]);
+			System.out.print((char) ImpossibleBlank[2]);
+			System.out.print((char) ImpossibleBlank[3]);
+			System.out.print((char) ImpossibleBlank[4]);
+			System.out.print((char) ImpossibleBlank[5]);
+			System.out.print((char) ImpossibleBlank[6]);
+			System.out.print((char) ImpossibleBlank[7]);
+			System.out.print((char) ImpossibleBlank[8]);
+			System.out.print((char) ImpossibleBlank[9]);
+			System.out.print((char) ImpossibleBlank[10]);
+			System.out.print((char) ImpossibleBlank[11]);
+			System.out.print((char) ImpossibleBlank[12]);
+			System.out.print((char) ImpossibleBlank[13]);
+			System.out.print((char) ImpossibleBlank[14]);
+			System.out.print((char) ImpossibleBlank[15]);
+			System.out.print((char) ImpossibleBlank[16]);
+			System.out.print((char) ImpossibleBlank[17]);
+			System.out.print((char) ImpossibleBlank[18]);
+			System.out.print((char) ImpossibleBlank[19]);
+			System.out.print((char) ImpossibleBlank[20]);
+			System.out.print((char) ImpossibleBlank[21]);
+			System.out.print((char) ImpossibleBlank[22]);
+			System.out.print((char) ImpossibleBlank[23]);
+			System.out.print((char) ImpossibleBlank[24]);
+			System.out.print((char) ImpossibleBlank[25]);
+			System.out.print((char) ImpossibleBlank[26]);
+			System.out.print((char) ImpossibleBlank[27]);
+			System.out.print((char) ImpossibleBlank[28]);
+			System.out.print((char) ImpossibleBlank[29]);
+			if (ImpossibleBlank[0] == Impossible[0]){
+				if (ImpossibleBlank[1] == Impossible[1]){
+					if (ImpossibleBlank[2] == Impossible[2]){
+						if (ImpossibleBlank[3] == Impossible[3]){
+							if (ImpossibleBlank[4] == Impossible[4]){
+								if (ImpossibleBlank[5] == Impossible[5]){
+									if (ImpossibleBlank[6] == Impossible[6]){
+										if (ImpossibleBlank[7] == Impossible[7]){
+											if (ImpossibleBlank[8] == Impossible[8]){
+												if (ImpossibleBlank[9] == Impossible[9]){
+													if (ImpossibleBlank[10] == Impossible[10]){
+														if (ImpossibleBlank[11] == Impossible[11]){
+															if (ImpossibleBlank[12] == Impossible[12]){
+																if (ImpossibleBlank[13] == Impossible[13]){
+																	if (ImpossibleBlank[14] == Impossible[14]){
+																		if (ImpossibleBlank[15] == Impossible[15]){
+																			if (ImpossibleBlank[16] == Impossible[16]){
+																				if (ImpossibleBlank[17] == Impossible[17]){
+																					if (ImpossibleBlank[18] == Impossible[18]){
+																						if (ImpossibleBlank[19] == Impossible[19]){
+																							if (ImpossibleBlank[20] == Impossible[20]){
+																								if (ImpossibleBlank[21] == Impossible[21]){
+																									if (ImpossibleBlank[22] == Impossible[22]){
+																										if (ImpossibleBlank[23] == Impossible[23]){
+																											if (ImpossibleBlank[24] == Impossible[24]){
+																												if (ImpossibleBlank[25] == Impossible[25]){
+																													if (ImpossibleBlank[26] == Impossible[26]){
+																														if (ImpossibleBlank[27] == Impossible[27]){
+																															if (ImpossibleBlank[28] == Impossible[28]){
+																																if (ImpossibleBlank[29] == Impossible[29]){
+																																	System.out.print(DifficultyPickerCustomMethod(failurecount));	
+																																}	
+																															}	
+																														}	
+																													}	
+																												}	
+																											}	
+																										}
+																									}	
+																								}
+																							}
+																						}	
+																					}	
+																				}
+																			}
+																		}
+																	}	
+																}
+															}
+														}
+													}	
+												}
+											}	
+										}	
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			System.out.print(" > ");
+			guess = input.next();	
+			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
+		}
+		if (ImpossibleGuess == Impossible[29]){ //M Impossible[29]
+			ImpossibleBlank[29] = Impossible[29];
+			System.out.print((char) ImpossibleBlank[0]);
+			System.out.print((char) ImpossibleBlank[1]);
+			System.out.print((char) ImpossibleBlank[2]);
+			System.out.print((char) ImpossibleBlank[3]);
+			System.out.print((char) ImpossibleBlank[4]);
+			System.out.print((char) ImpossibleBlank[5]);
+			System.out.print((char) ImpossibleBlank[6]);
+			System.out.print((char) ImpossibleBlank[7]);
+			System.out.print((char) ImpossibleBlank[8]);
+			System.out.print((char) ImpossibleBlank[9]);
+			System.out.print((char) ImpossibleBlank[10]);
+			System.out.print((char) ImpossibleBlank[11]);
+			System.out.print((char) ImpossibleBlank[12]);
+			System.out.print((char) ImpossibleBlank[13]);
+			System.out.print((char) ImpossibleBlank[14]);
+			System.out.print((char) ImpossibleBlank[15]);
+			System.out.print((char) ImpossibleBlank[16]);
+			System.out.print((char) ImpossibleBlank[17]);
+			System.out.print((char) ImpossibleBlank[18]);
+			System.out.print((char) ImpossibleBlank[19]);
+			System.out.print((char) ImpossibleBlank[20]);
+			System.out.print((char) ImpossibleBlank[21]);
+			System.out.print((char) ImpossibleBlank[22]);
+			System.out.print((char) ImpossibleBlank[23]);
+			System.out.print((char) ImpossibleBlank[24]);
+			System.out.print((char) ImpossibleBlank[25]);
+			System.out.print((char) ImpossibleBlank[26]);
+			System.out.print((char) ImpossibleBlank[27]);
+			System.out.print((char) ImpossibleBlank[28]);
+			System.out.print((char) ImpossibleBlank[29]);
+			if (ImpossibleBlank[0] == Impossible[0]){
+				if (ImpossibleBlank[1] == Impossible[1]){
+					if (ImpossibleBlank[2] == Impossible[2]){
+						if (ImpossibleBlank[3] == Impossible[3]){
+							if (ImpossibleBlank[4] == Impossible[4]){
+								if (ImpossibleBlank[5] == Impossible[5]){
+									if (ImpossibleBlank[6] == Impossible[6]){
+										if (ImpossibleBlank[7] == Impossible[7]){
+											if (ImpossibleBlank[8] == Impossible[8]){
+												if (ImpossibleBlank[9] == Impossible[9]){
+													if (ImpossibleBlank[10] == Impossible[10]){
+														if (ImpossibleBlank[11] == Impossible[11]){
+															if (ImpossibleBlank[12] == Impossible[12]){
+																if (ImpossibleBlank[13] == Impossible[13]){
+																	if (ImpossibleBlank[14] == Impossible[14]){
+																		if (ImpossibleBlank[15] == Impossible[15]){
+																			if (ImpossibleBlank[16] == Impossible[16]){
+																				if (ImpossibleBlank[17] == Impossible[17]){
+																					if (ImpossibleBlank[18] == Impossible[18]){
+																						if (ImpossibleBlank[19] == Impossible[19]){
+																							if (ImpossibleBlank[20] == Impossible[20]){
+																								if (ImpossibleBlank[21] == Impossible[21]){
+																									if (ImpossibleBlank[22] == Impossible[22]){
+																										if (ImpossibleBlank[23] == Impossible[23]){
+																											if (ImpossibleBlank[24] == Impossible[24]){
+																												if (ImpossibleBlank[25] == Impossible[25]){
+																													if (ImpossibleBlank[26] == Impossible[26]){
+																														if (ImpossibleBlank[27] == Impossible[27]){
+																															if (ImpossibleBlank[28] == Impossible[28]){
+																																if (ImpossibleBlank[29] == Impossible[29]){
+																																	System.out.print(DifficultyPickerCustomMethod(failurecount));	
+																																}	
+																															}	
+																														}	
+																													}	
+																												}	
+																											}	
+																										}
+																									}	
+																								}
+																							}
+																						}	
+																					}	
+																				}
+																			}
+																		}
+																	}	
+																}
+															}
+														}
+													}	
+												}
+											}	
+										}	
+									}
 								}
 							}
 						}
@@ -1363,7 +2647,76 @@ public class Ex735 {
 		if (ImpossibleGuess != Impossible[6]){
 			failure +=1;
 		}
-		if (failure <= 7){
+		if (ImpossibleGuess != Impossible[7]){
+			failure +=1;
+		}
+		if (ImpossibleGuess != Impossible[8]){
+			failure +=1;
+		}
+		if (ImpossibleGuess != Impossible[9]){
+			failure +=1;
+		}
+		if (ImpossibleGuess != Impossible[10]){
+			failure +=1;
+		}
+		if (ImpossibleGuess != Impossible[11]){
+			failure +=1;
+		}
+		if (ImpossibleGuess != Impossible[12]){
+			failure +=1;
+		}
+		if (ImpossibleGuess != Impossible[13]){
+			failure +=1;
+		}
+		if (ImpossibleGuess != Impossible[14]){
+			failure +=1;
+		}
+		if (ImpossibleGuess != Impossible[15]){
+			failure +=1;
+		}
+		if (ImpossibleGuess != Impossible[16]){
+			failure +=1;
+		}
+		if (ImpossibleGuess != Impossible[17]){
+			failure +=1;
+		}
+		if (ImpossibleGuess != Impossible[18]){
+			failure +=1;
+		}
+		if (ImpossibleGuess != Impossible[19]){
+			failure +=1;
+		}
+		if (ImpossibleGuess != Impossible[20]){
+			failure +=1;
+		}
+		if (ImpossibleGuess != Impossible[21]){
+			failure +=1;
+		}
+		if (ImpossibleGuess != Impossible[22]){
+			failure +=1;
+		}
+		if (ImpossibleGuess != Impossible[23]){
+			failure +=1;
+		}
+		if (ImpossibleGuess != Impossible[24]){
+			failure +=1;
+		}
+		if (ImpossibleGuess != Impossible[25]){
+			failure +=1;
+		}
+		if (ImpossibleGuess != Impossible[26]){
+			failure +=1;
+		}
+		if (ImpossibleGuess != Impossible[27]){
+			failure +=1;
+		}
+		if (ImpossibleGuess != Impossible[28]){
+			failure +=1;
+		}
+		if (ImpossibleGuess != Impossible[29]){
+			failure +=1;
+		}
+		if (failure <= 30){
 			failurecount += 1;
 			Hangman += 1;
 			System.out.print(HangmanManCustomMethod(Hangman));
@@ -1376,6 +2729,29 @@ public class Ex735 {
 			System.out.print((char) ImpossibleBlank[4]);
 			System.out.print((char) ImpossibleBlank[5]);
 			System.out.print((char) ImpossibleBlank[6]);
+			System.out.print((char) ImpossibleBlank[7]);
+			System.out.print((char) ImpossibleBlank[8]);
+			System.out.print((char) ImpossibleBlank[9]);
+			System.out.print((char) ImpossibleBlank[10]);
+			System.out.print((char) ImpossibleBlank[11]);
+			System.out.print((char) ImpossibleBlank[12]);
+			System.out.print((char) ImpossibleBlank[13]);
+			System.out.print((char) ImpossibleBlank[14]);
+			System.out.print((char) ImpossibleBlank[15]);
+			System.out.print((char) ImpossibleBlank[16]);
+			System.out.print((char) ImpossibleBlank[17]);
+			System.out.print((char) ImpossibleBlank[18]);
+			System.out.print((char) ImpossibleBlank[19]);
+			System.out.print((char) ImpossibleBlank[20]);
+			System.out.print((char) ImpossibleBlank[21]);
+			System.out.print((char) ImpossibleBlank[22]);
+			System.out.print((char) ImpossibleBlank[23]);
+			System.out.print((char) ImpossibleBlank[24]);
+			System.out.print((char) ImpossibleBlank[25]);
+			System.out.print((char) ImpossibleBlank[26]);
+			System.out.print((char) ImpossibleBlank[27]);
+			System.out.print((char) ImpossibleBlank[28]);
+			System.out.print((char) ImpossibleBlank[29]);
 			guess = input.next();
 			System.out.print(ImpossibleModeBlanksCustomMethod(guess, Impossible, ImpossibleBlank, failurecount, Hangman));
 		}
