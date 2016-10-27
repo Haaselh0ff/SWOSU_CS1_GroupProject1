@@ -5,9 +5,5 @@ Joshua Haas:
 	Revision4 - Relatively finished with code, added Impossible Mode. Need other's code to finish.
 	Revision5 - Added the actual "Hangman" to the code. Don't know how I could forget this...
 	Revision6 - Simple test so that we can begin adding each others work.
-<<<<<<< HEAD
 	Revision7 - Final test
 	Revision8 - Redid Impossible Mode with some massively long code and gave it a new 30 letter word.
-=======
-	Revision7 - Final test
->>>>>>> bf8698c5106b34505271438a746e24f1cca1ae0f
