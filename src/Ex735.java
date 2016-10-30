@@ -14,15 +14,22 @@ public class Ex735 {
 		try{
 			int whichGame = input.nextInt();
 			if (whichGame == 1){
+<<<<<<< HEAD
 				//Input Josh's code here
+=======
+>>>>>>> 9af8514a38448afa5740dcd2abbb0aa5dd6ba64d
 				for (int i = 0; i < 100; ++i) System.out.println();
 				System.out.println("Console Refreshed");
 				System.out.print(HangmanCustomMethod());
 			}			
 			if (whichGame == 2){
+<<<<<<< HEAD
 				String[] args = null;
 				//Input Kade's code here
 				gameCustomMethod(args);
+=======
+				//Input Kade's code here
+>>>>>>> 9af8514a38448afa5740dcd2abbb0aa5dd6ba64d
 			}
 			if (whichGame ==3){
 				//Input Lane's code here
@@ -2881,6 +2888,7 @@ public class Ex735 {
 		return blank;
 	}
 	//HANGMAN CODE END.
+<<<<<<< HEAD
 	//DECK OF CARDS GAME START. GO TO LINE 2948 TO SKIP.
 	public static void gameCustomMethod(String[] args){
 		//initialize everything
@@ -2970,6 +2978,10 @@ public class Ex735 {
 		}
 
 	}
+=======
+	//DECK OF CARDS GAME START. GO TO LINE ____ TO SKIP.
+
+>>>>>>> 9af8514a38448afa5740dcd2abbb0aa5dd6ba64d
 	//DECK OF CARDS GAME END.
 	//LANE CODE START. GO TO LINE ____ TO SKIP.
 
