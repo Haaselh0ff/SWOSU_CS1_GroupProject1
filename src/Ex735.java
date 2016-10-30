@@ -1,58 +1,90 @@
-import java.util.Scanner;  
+import java.util.*;
 public class Ex735 {
 	public static void main(String[] args) { 
-		System.out.print(GameHub());
+		GameHub();
 	}
 	//GameHud. This is what you see when the code starts and allows you to select the various game modes.
 	public static char GameHub(){
 		Scanner input = new Scanner(System.in); 
 		System.out.println("GAME HUB: PLEASE SELECT A GAME \n"
 				+ "(1) Hangman - The classic game of guessing letters to spell out a word. \n"
-				+ "(2) Deck of Cards Game - I don't actually know what this game is but have fun. \n"
+				+ "(2) Deck of Cards Game - Play one of the most exciting and rivoting games of the 20th century! \n"
 				+ "(3) Lane's Game - Not sure where he is, but I hope he helps us out on this code.");
-		int whichGame = input.nextInt();
-		if (whichGame == 1){
-			for (int i = 0; i < 100; ++i) System.out.println();
-			System.out.println("Console Refreshed");
-			System.out.print(HangmanCustomMethod());
-		}			
-		if (whichGame == 2){
-			//Input Kade's code here
+		//TryCatch to make sure proper inputs are put into the program
+		try{
+			int whichGame = input.nextInt();
+			if (whichGame == 1){
+				//Input Josh's code here
+				for (int i = 0; i < 100; ++i) System.out.println();
+				System.out.println("Console Refreshed");
+				System.out.print(HangmanCustomMethod());
+			}			
+			if (whichGame == 2){
+				String[] args = null;
+				//Input Kade's code here
+				gameCustomMethod(args);
+			}
+			if (whichGame ==3){
+				//Input Lane's code here
+			}
+			if(whichGame >=4){
+				for (int i = 0; i < 100; ++i) System.out.println();
+				System.out.println("RESISTANCE IS FUTILE. INPUT A CORRECT NUMBER!");
+				System.out.println("RESTARTING GAME");
+				System.out.print(GameHub());
+			}
+			if(whichGame <= 0){
+				for (int i = 0; i < 100; ++i) System.out.println();
+				System.out.println("RESISTANCE IS FUTILE. INPUT A CORRECT NUMBER!");
+				System.out.println("RESTARTING GAME");
+				System.out.print(GameHub());	
+			}
 		}
-		if (whichGame ==3){
-			//Input Lane's code here
+		//Catches any lettered inputs and repeats the program
+		catch (Exception e) {
+			System.out.println("ERROR: IMPROPER DATA ENTERED. PLEASE INPUT NUMERIC VALUES ONLY.");
+			for (int i = 0; i < 5; ++i) System.out.println();
+			System.out.print(GameHub());
 		}
 		char blank = ' ';
 		return blank;
 	}
+	//HANGMAN CODE START. GO TO LINE 2880 TO SKIP.
 	public static char HangmanCustomMethod(){
 		Scanner input = new Scanner(System.in); 
 		System.out.println("Let's play Hangman! (Code by Joshua Haas)\nPlease choose a difficulty. (1) Easy, (2) Medium, (3) Hard, (4) Impossible, "
 				+ "(5) Game Hub");
-		int difficulty = input.nextInt();
-		String guess = null;
-		if (difficulty == 1){
-			double randomizer = Math.random() * 15;
-			System.out.println(EasyModeCustomMethod(guess, randomizer));
+		try{
+			int difficulty = input.nextInt();
+			String guess = null;
+			if (difficulty == 1){
+				double randomizer = Math.random() * 15;
+				System.out.println(EasyModeCustomMethod(guess, randomizer));
+			}
+			if (difficulty == 2){
+				double randomizer = Math.random() * 15;
+				System.out.println(MediumModeCustomMethod(guess, randomizer));
+			}
+			if (difficulty == 3){
+				double randomizer = Math.random() *15;
+				System.out.println(HardModeCustomMethod(guess,randomizer));
+			}
+			if (difficulty == 4){
+				for (int i = 0; i < 100; ++i) System.out.println();
+				System.out.println("Console Refreshed");
+				double randomizer = Math.random() * 15;
+				System.out.print(ImpossibleModeCustomMethod(guess, randomizer));
+			}
+			if (difficulty == 5){
+				for (int i = 0; i < 100; ++i) System.out.println();
+				System.out.println("Console Refreshed");
+				System.out.println(GameHub());
+			}
 		}
-		if (difficulty == 2){
-			double randomizer = Math.random() * 15;
-			System.out.println(MediumModeCustomMethod(guess, randomizer));
-		}
-		if (difficulty == 3){
-			double randomizer = Math.random() *15;
-			System.out.println(HardModeCustomMethod(guess,randomizer));
-		}
-		if (difficulty == 4){
-			for (int i = 0; i < 100; ++i) System.out.println();
-			System.out.println("Console Refreshed");
-			double randomizer = Math.random() * 15;
-			System.out.print(ImpossibleModeCustomMethod(guess, randomizer));
-		}
-		if (difficulty == 5){
-			for (int i = 0; i < 100; ++i) System.out.println();
-			System.out.println("Console Refreshed");
-			System.out.println(GameHub());
+		catch(Exception e){
+			System.out.println("ERROR: IMPROPER DATA ENTERED. PLEASE INPUT NUMERIC VALUES ONLY.");
+			for (int i = 0; i < 7; ++i) System.out.println();
+			System.out.print(HangmanCustomMethod());
 		}
 		char blank = ' ';
 		return blank;
@@ -146,6 +178,7 @@ public class Ex735 {
 		EasyBlank[2] = 42;
 		System.out.print(" *** > ");
 		guess = input.next();		
+
 		System.out.print(EasyModeBlanksCustomMethod(guess, Easy, EasyBlank, failurecount, Hangman));
 
 		char blank = ' ';
@@ -256,37 +289,44 @@ public class Ex735 {
 		}
 		System.out.print("\nPick another difficulty? (1) Easy, (2) Medium, (3) Hard, (4) Impossible (5) Game Hub"
 				+"\nOr choose the same difficulty for a different word \n");
-		int difficulty = input.nextInt();
-		String guess = null;
-		if (difficulty == 1){
-			for (int i = 0; i < 100; ++i) System.out.println();
-			System.out.println("Console Refreshed");
-			double randomizer = Math.random() * 15;
-			System.out.println(EasyModeCustomMethod(guess, randomizer));
+		try{
+			int difficulty = input.nextInt();
+			String guess = null;
+			if (difficulty == 1){
+				for (int i = 0; i < 100; ++i) System.out.println();
+				System.out.println("Console Refreshed");
+				double randomizer = Math.random() * 15;
+				System.out.println(EasyModeCustomMethod(guess, randomizer));
+			}
+			if (difficulty == 2){
+				for (int i = 0; i < 100; ++i) System.out.println();
+				System.out.println("Console Refreshed");
+				double randomizer = Math.random() * 15;
+				System.out.println(MediumModeCustomMethod(guess, randomizer));
+			}
+			if (difficulty == 3){
+				for (int i = 0; i < 100; ++i) System.out.println();
+				System.out.println("Console Refreshed");
+				double randomizer = Math.random() * 15;
+				System.out.println(HardModeCustomMethod(guess, randomizer));
+			}
+			if (difficulty == 4){
+				for (int i = 0; i < 100; ++i) System.out.println();
+				System.out.println("Console Refreshed");
+				double randomizer = Math.random() * 15;
+				System.out.println(ImpossibleModeCustomMethod(guess, randomizer));
+				//TO DO: ADD IMPOSSIBLE MODE
+			}
+			if (difficulty == 5){
+				for (int i = 0; i < 100; ++i) System.out.println();
+				System.out.println("Console Refreshed");
+				System.out.println(GameHub());
+			}
 		}
-		if (difficulty == 2){
-			for (int i = 0; i < 100; ++i) System.out.println();
-			System.out.println("Console Refreshed");
-			double randomizer = Math.random() * 15;
-			System.out.println(MediumModeCustomMethod(guess, randomizer));
-		}
-		if (difficulty == 3){
-			for (int i = 0; i < 100; ++i) System.out.println();
-			System.out.println("Console Refreshed");
-			double randomizer = Math.random() * 15;
-			System.out.println(HardModeCustomMethod(guess, randomizer));
-		}
-		if (difficulty == 4){
-			for (int i = 0; i < 100; ++i) System.out.println();
-			System.out.println("Console Refreshed");
-			double randomizer = Math.random() * 15;
-			System.out.println(ImpossibleModeCustomMethod(guess, randomizer));
-			//TO DO: ADD IMPOSSIBLE MODE
-		}
-		if (difficulty == 5){
-			for (int i = 0; i < 100; ++i) System.out.println();
-			System.out.println("Console Refreshed");
-			System.out.println(GameHub());
+		catch(Exception e){
+			System.out.println("ERROR: IMPROPER DATA ENTERED. PLEASE INPUT NUMERIC VALUES ONLY.");
+			for (int i = 0; i < 3; ++i) System.out.println();
+			System.out.print(DifficultyPickerCustomMethod(failurecount));
 		}
 		return null;
 	}
@@ -2840,4 +2880,98 @@ public class Ex735 {
 		char blank = ' ';
 		return blank;
 	}
+	//HANGMAN CODE END.
+	//DECK OF CARDS GAME START. GO TO LINE 2948 TO SKIP.
+	public static void gameCustomMethod(String[] args){
+		//initialize everything
+		int[] cardDeck = new int[52];
+		String[] suits = {"Spades", "Hearts", "Diamonds", "Clubs"};
+		String[] ranks = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
+		List<String> pickedCards = new ArrayList<String>();
+
+		//initialize the cards
+		for(int i = 0; i< cardDeck.length; i ++)
+			cardDeck[i] = i;
+
+		//shuffle the cards
+		for(int i = 0; i < cardDeck.length; i++){
+
+			//generate an index randomly
+			int index = (int)(Math.random() * cardDeck.length);
+			int temp = cardDeck[i];
+			cardDeck[i] = cardDeck[index];
+			cardDeck[index] = temp;
+		}
+
+		//display the four cards
+		for(int i = 0; i < 4; i++){
+			String suit = suits[cardDeck[i] / 13];
+			String rank = ranks[cardDeck[i] % 13];
+			System.out.println(rank + " of " + suit);
+			pickedCards.add(rank);
+		}
+
+		//create variable for Ace, King, Queen, Jack
+		int Ace, Jack, Queen, King;
+
+		//Assign a point vale to each
+		int[] points = {Ace = 1, Jack = 11, Queen = 12, King = 13};
+
+		//add the cards together and show sum
+		int sum = 0;
+		int jack = 11;
+		int queen = 12;
+		int king = 13;
+		int ace = 1;
+		Iterator<String> iterator = pickedCards.iterator();
+		while(iterator.hasNext()) {
+
+			String rank = iterator.next();
+			System.out.println(rank);
+			if(rank.equalsIgnoreCase("Jack")){
+				sum = sum+jack;
+			}
+			else if(rank.equalsIgnoreCase("Queen")){
+				sum = sum+queen;
+			}
+			else if(rank.equalsIgnoreCase("King")){
+				sum = sum+king;
+			}
+			else if(rank.equalsIgnoreCase("Ace")){
+				sum = sum+ace;
+			} 
+			else {
+				sum = sum+Integer.parseInt(rank);
+			}
+		}
+		System.out.println("Sum of picked cards is : "+sum);
+		//Parts below were added to keep with the rest of the game format
+		System.out.print("Play again? (1) Yes. (2) No, return to Game Hub.");
+		Scanner input = new Scanner(System.in); 
+		int repeator = input.nextInt();
+		try{
+			if(repeator <= 0){
+				System.out.println("Choice not specified, returning to Game Hub.");
+				GameHub();
+			}
+			if (repeator == 1){
+				gameCustomMethod(args);
+			}
+			if (repeator == 2){
+				GameHub();
+			}
+			if (repeator >= 3){
+				System.out.println("Choice not specified, returning to Game Hub.");
+				GameHub();
+			}
+		}
+		catch (Exception e){
+			System.out.println("There was an error in your input, please enter a numeric value");
+		}
+
+	}
+	//DECK OF CARDS GAME END.
+	//LANE CODE START. GO TO LINE ____ TO SKIP.
+
+	//LANE CODE END.
 }
