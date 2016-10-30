@@ -7,6 +7,7 @@ Joshua Haas:
 	Revision6 - Simple test so that we can begin adding each others work.
 	Revision7 - Final test
 	Revision8 - Redid Impossible Mode with some massively long code and gave it a new 30 letter word.
+	Revision9 - Kade's Code added. All is well.
 
 How to:
 
