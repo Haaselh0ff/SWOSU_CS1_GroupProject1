@@ -8,6 +8,7 @@ Joshua Haas:
 	Revision7 - Final test
 	Revision8 - Redid Impossible Mode with some massively long code and gave it a new 30 letter word.
 	Revision9 - Kade's Code added. All is well.
+	Revision10 - Added Lane's code and finished the coding.
 
 How to:
 
