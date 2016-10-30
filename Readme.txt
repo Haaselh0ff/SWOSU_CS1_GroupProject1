@@ -36,11 +36,14 @@ git commit -m "Your message here"
 (This commits the code to your repository, I think it may ask for a
 username and password at this point but idk just enter whatever it wants and you'll be good)
 
+(NEVER MIND, THIS IS COMPLETELY WRONG)
 (When you push for the first time)
 git remote add origin https://github.com/Haaselh0ff/SWOSU_CS1_GroupProject1.git
 
 (Pushes under the newly defined place)
 git push -u origin master
+(END COMPLETELY WRONGNESS, IGNORE MY FAILURE)
+
 
 (After first push you can just type this)
 git push 
